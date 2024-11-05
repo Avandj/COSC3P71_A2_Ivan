@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79a88295-d8b4-4d8c-b71e-d00f96ce5371" name="Changes" comment="got rid of Courses.txt that i didnt need in there" />
+    <list default="true" id="79a88295-d8b4-4d8c-b71e-d00f96ce5371" name="Changes" comment="commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chromosone.py" beforeDir="false" afterPath="$PROJECT_DIR$/Chromosone.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,7 +81,7 @@
       <option name="presentableId" value="Default" />
       <updated>1730675446562</updated>
       <workItem from="1730675450132" duration="778000" />
-      <workItem from="1730676238806" duration="7595000" />
+      <workItem from="1730676238806" duration="20750000" />
     </task>
     <task id="LOCAL-00001" summary="got rid of Courses.txt that i didnt need in there">
       <option name="closed" value="true" />
@@ -95,7 +99,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730740873756</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="commit">
+      <option name="closed" value="true" />
+      <created>1730741323365</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1730741323365</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,7 +126,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="got rid of Courses.txt that i didnt need in there" />
-    <option name="LAST_COMMIT_MESSAGE" value="got rid of Courses.txt that i didnt need in there" />
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

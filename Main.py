@@ -1,4 +1,4 @@
-
+import Chromosone
 
 courses= []
 rooms=[]
@@ -23,7 +23,7 @@ with open("t1/rooms.txt","r") as file:
         name, capacity = line.strip().split(",")
         rooms.append({
             "name": name,
-            "capacity": int(capacity)  # Convert to integer
+            "capacity": int(capacity)
         })
 
 with open("t1/timeslots.txt","r") as file:
@@ -33,6 +33,14 @@ with open("t1/timeslots.txt","r") as file:
         day, hour = line.strip().split(",")
         timeslots.append({
             "day": day,
-            "hour": int(hour)  # Convert to integer
+            "hour": int(hour)
         })
 
+Chromosone.classes=courses
+Chromosone.rooms=rooms
+Chromosone.times=timeslots
+Chromosone.profs = [course['professor'] for course in courses]
+
+def generateChromosones():
+    for x in range(200):
+        C

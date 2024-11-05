@@ -1,3 +1,9 @@
 class Chromosone:
-    def __init__(self):
-        self.chromosone = []
+
+    classes=[];
+    times=[];
+    rooms=[];
+    profs=[];
+
+    def __init__(self,):
+        print()
