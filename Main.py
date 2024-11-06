@@ -1,19 +1,23 @@
 import Chromosone
 import random
-import ClassObj
+from Gene import Gene
 
-def generateClasses(classesNum,courses,timeslots,profs):
+def generateChromosone(courses,timeslots,profs,rooms):
 
 
     classes=[]
-    for j in range(classesNum):
+    for j in range(len(courses)):
         course_index = j
-        time_index = random.randint(0, len(Chromosone.times) - 1)
-        prof_index = random.randint(0, len(Chromosone.profs) - 1)
+        time_index = random.randint(0, len(timeslots) -1)
+        prof_index = random.randint(0, len(profs) -1)
+        room_index= random.randint(0, len(rooms) -1)
+        course_name = courses[course_index]['name']
 
 
-        classes.append(ClassObj(course=course_index,time=Chromosone.times[time_index],prof=Chromosone.profs[prof_index]))
+        classes.append(Gene(course=course_name,time=timeslots[time_index],prof=profs[prof_index],room=rooms[room_index]))
 
+    for i in range(len(classes)):
+        print(str(i+1)+" "+str(classes[i].course)+" "+str(classes[i].time)+" "+str(classes[i].prof)+" "+str(classes[i].room)+"\n")
 
 
 
@@ -60,7 +64,7 @@ Chromosone.times = timeslots
 profs=[course['professor'] for course in courses]
 Chromosone.profs =profs
 classesNum= len(Chromosone.classes)
-generateClasses(classesNum,courses,timeslots,profs)
+generateChromosone(courses,timeslots,profs,rooms)
 
 
 
