@@ -7,8 +7,6 @@
     <list default="true" id="79a88295-d8b4-4d8c-b71e-d00f96ce5371" name="Changes" comment="commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Chromosone.py" beforeDir="false" afterPath="$PROJECT_DIR$/Chromosone.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClassObj.py" beforeDir="false" afterPath="$PROJECT_DIR$/Gene.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +83,7 @@
       <updated>1730675446562</updated>
       <workItem from="1730675450132" duration="778000" />
       <workItem from="1730676238806" duration="26111000" />
-      <workItem from="1730912542945" duration="6860000" />
+      <workItem from="1730912542945" duration="8068000" />
     </task>
     <task id="LOCAL-00001" summary="got rid of Courses.txt that i didnt need in there">
       <option name="closed" value="true" />
@@ -127,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730916794032</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="commit">
+      <option name="closed" value="true" />
+      <created>1730921123791</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1730921123791</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
