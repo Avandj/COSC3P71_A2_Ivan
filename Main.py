@@ -1,10 +1,28 @@
 import Chromosone
+import random
+import ClassObj
 
-courses= []
-rooms=[]
-timeslots=[]
+def generateClasses(classesNum,courses,timeslots,profs):
 
-with open("t1/courses.txt","r") as file:
+
+    classes=[]
+    for j in range(classesNum):
+        course_index = j
+        time_index = random.randint(0, len(Chromosone.times) - 1)
+        prof_index = random.randint(0, len(Chromosone.profs) - 1)
+
+
+        classes.append(ClassObj(course=course_index,time=Chromosone.times[time_index],prof=Chromosone.profs[prof_index]))
+
+
+
+
+
+courses = []
+rooms = []
+timeslots = []
+
+with open("t1/courses.txt", "r") as file:
     next(file)
 
     for line in file:
@@ -16,7 +34,7 @@ with open("t1/courses.txt","r") as file:
             "duration": int(duration)  # Convert to integer
         })
 
-with open("t1/rooms.txt","r") as file:
+with open("t1/rooms.txt", "r") as file:
     next(file)
 
     for line in file:
@@ -26,7 +44,7 @@ with open("t1/rooms.txt","r") as file:
             "capacity": int(capacity)
         })
 
-with open("t1/timeslots.txt","r") as file:
+with open("t1/timeslots.txt", "r") as file:
     next(file)
 
     for line in file:
@@ -36,11 +54,15 @@ with open("t1/timeslots.txt","r") as file:
             "hour": int(hour)
         })
 
-Chromosone.classes=courses
-Chromosone.rooms=rooms
-Chromosone.times=timeslots
-Chromosone.profs = [course['professor'] for course in courses]
+Chromosone.classes = courses
+Chromosone.rooms = rooms
+Chromosone.times = timeslots
+profs=[course['professor'] for course in courses]
+Chromosone.profs =profs
+classesNum= len(Chromosone.classes)
+generateClasses(classesNum,courses,timeslots,profs)
 
-def generateChromosones():
-    for x in range(200):
-        C
+
+
+
+
