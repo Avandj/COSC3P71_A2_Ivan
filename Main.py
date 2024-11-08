@@ -34,7 +34,7 @@ with open("t1/courses.txt", "r") as file:
         courses.append({
             "name": name,
             "professor": professor,
-            "students": int(students),  # Convert to integer
+            "students": int(students),  #converts it to interger
             "duration": int(duration)  # Convert to integer
         })
 
