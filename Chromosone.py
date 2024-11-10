@@ -1,38 +1,51 @@
 from Gene import Gene
+
+
 class Chromosone:
 
-    classes=[];
-    times=[];
-    rooms=[];
-    profs=[];
+    def __init__(self, classList):
+        self.classList = classList
+        self.fitness = self.calcFitness(self)
 
 
 
-    def __init__(self,classList):
-        self.classList=classList
-        fitness=self.getFitness(self.classList);
+    def calcFitness(self):
+        conflicts = 0
+        roomUsage = {}
+        profSchedule = {}
 
+        for classO in self.classList:
 
-    ##Method for storing the full list of classes, profs, room, and times
-    @classmethod
-    def setStaticAttributes(cls, classes, times, rooms, profs):
-        """Set the static attributes for the class."""
-        cls.classes = classes
-        cls.times = times
-        cls.rooms = rooms
-        cls.profs = profs
+            course = classO.course
+            room = classO.room
+            timeSlot = classO.time
+            students = classO.course["students"]
+            proffessor = classO.prof
+
+            if (students > room['capacity']):
+                conflicts += 2
+
+            for hour in range(course['duration']):
+
+                current_slot = timeSlot['hour'] + hour
+                if (room['name'], current_slot) not in roomUsage:
+                    roomUsage[(room['name'], current_slot)] = 0
+                roomUsage[(room['name'], current_slot)] += 1
+
+                #checks for conflics for the rooms
+                if roomUsage[(room['name'], current_slot)] > 1:
+                    conflicts += 3
+
+                if (proffessor, current_slot) not in profSchedule:
+                    profSchedule[(proffessor, current_slot)] = 0
+                profSchedule[(proffessor, current_slot)] += 1
+
+                # Checks for professor conflicts
+                if profSchedule[(proffessor, current_slot)] > 1:
+                    conflicts += 1
+
+        # Calculate fitness score: higher score for fewer conflicts
+        return 1 / (1 + conflicts)
 
     def getFitness(self):
-        conflicts=0
-        roomUsage={}
-        profSchedule={}
-
-        for classO in classList:
-
-            course= classO.course
-            room=classO.room
-            timeSlot=classO.time
-            proffessor=classO.prof
-
-    def checkConflicts(self):
-        print()
+        return self.fitness

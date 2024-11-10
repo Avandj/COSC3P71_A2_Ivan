@@ -1,4 +1,4 @@
-import Chromosone
+from Chromosone import Chromosone
 import random
 from Gene import Gene
 
@@ -16,8 +16,11 @@ def generateChromosone(courses,timeslots,profs,rooms):
 
         classes.append(Gene(course=course_name,time=timeslots[time_index],prof=profs[prof_index],room=rooms[room_index]))
 
+    chromosone=Chromosone(classes)
+
     for i in range(len(classes)):
-        print(str(i+1)+" "+str(classes[i].course)+" "+str(classes[i].time)+" "+str(classes[i].prof)+" "+str(classes[i].room)+"\n")
+        print(str(i+1)+" "+str(classes[i].course)+", "+str(classes[i].time)+", "+str(classes[i].prof)+", "+str(classes[i].room)+"\n")
+        print(chromosone.getFitness())
 
 
 
@@ -35,8 +38,8 @@ with open("t1/courses.txt", "r") as file:
         courses.append({
             "name": name,
             "professor": professor,
-            "students": int(students),  #converts it to interger
-            "duration": int(duration)  # Convert to integer
+            "students": int(students),
+            "duration": int(duration)
         })
 
 with open("t1/rooms.txt", "r") as file:
@@ -62,10 +65,10 @@ with open("t1/timeslots.txt", "r") as file:
 Chromosone.classes = courses
 Chromosone.rooms = rooms
 Chromosone.times = timeslots
-profs=[course['professor'] for course in courses]
+profs = [course['professor'] for course in courses]
 Chromosone.profs =profs
 classesNum= len(Chromosone.classes)
-generateChromosone(courses,timeslots,profs,rooms)
+generateChromosone(courses, timeslots, profs, rooms)
 
 
 
