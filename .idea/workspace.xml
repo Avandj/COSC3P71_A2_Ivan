@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="79a88295-d8b4-4d8c-b71e-d00f96ce5371" name="Changes" comment="commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +83,7 @@
       <updated>1730675446562</updated>
       <workItem from="1730675450132" duration="778000" />
       <workItem from="1730676238806" duration="26111000" />
-      <workItem from="1730912542945" duration="8281000" />
+      <workItem from="1730912542945" duration="12869000" />
     </task>
     <task id="LOCAL-00001" summary="got rid of Courses.txt that i didnt need in there">
       <option name="closed" value="true" />
@@ -140,7 +141,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730922291570</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="commit">
+      <option name="closed" value="true" />
+      <created>1730926858302</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1730926858302</updated>
+    </task>
+    <task id="LOCAL-00009" summary="commit">
+      <option name="closed" value="true" />
+      <created>1731097841794</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1731097841794</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

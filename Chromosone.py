@@ -22,7 +22,7 @@ class Chromosone:
         cls.rooms = rooms
         cls.profs = profs
 
-    def getFitness(self, classList):
+    def getFitness(self):
         conflicts=0
         roomUsage={}
         profSchedule={}

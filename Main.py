@@ -9,7 +9,7 @@ def generateChromosone(courses,timeslots,profs,rooms):
     for j in range(len(courses)):
         course_index = j
         time_index = random.randint(0, len(timeslots) -1)
-        prof_index = random.randint(0, len(profs) -1)
+        prof_index = j
         room_index= random.randint(0, len(rooms) -1)
         course_name = courses[course_index]['name']
 
@@ -18,6 +18,7 @@ def generateChromosone(courses,timeslots,profs,rooms):
 
     for i in range(len(classes)):
         print(str(i+1)+" "+str(classes[i].course)+" "+str(classes[i].time)+" "+str(classes[i].prof)+" "+str(classes[i].room)+"\n")
+
 
 
 
