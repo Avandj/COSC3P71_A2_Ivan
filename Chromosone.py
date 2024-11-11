@@ -5,7 +5,7 @@ class Chromosone:
 
     def __init__(self, classList):
         self.classList = classList
-        self.fitness = self.calcFitness(self)
+        self.fitness = self.calcFitness()
 
 
 
@@ -19,13 +19,14 @@ class Chromosone:
             course = classO.course
             room = classO.room
             timeSlot = classO.time
-            students = classO.course["students"]
+            students =classO.students
             proffessor = classO.prof
+            duration = classO.duration
 
             if (students > room['capacity']):
                 conflicts += 2
 
-            for hour in range(course['duration']):
+            for hour in range(duration):
 
                 current_slot = timeSlot['hour'] + hour
                 if (room['name'], current_slot) not in roomUsage:
