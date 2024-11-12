@@ -5,6 +5,7 @@ class Chromosone:
 
     def __init__(self, classList):
         self.classList = classList
+        self.size = len(classList)
         self.fitness = self.calcFitness()
 
 
@@ -50,3 +51,4 @@ class Chromosone:
 
     def getFitness(self):
         return self.fitness
+

@@ -25,6 +25,24 @@ def generateChromosone(courses, timeslots, profs, rooms, population):
 
     print(chromosone.getFitness())
 
+    return chromosone
+
+def printChromosone(chromosone):
+
+    for i, gene in enumerate(chromosone.classes):
+        print(f"{i + 1}: Course: {gene.course}, Time: {gene.time}, Prof: {gene.prof}, Room: {gene.room}")
+
+def tournamentSelection(population):
+    k=3
+
+    tournament= random.sample(population,k)
+
+
+    bestChromosone = max(tournament, key=lambda chrom: chrom.getFitness())
+
+    printChromosone(bestChromosone)
+
+    return bestChromosone
 
 
 
@@ -74,9 +92,13 @@ profs = [course['professor'] for course in courses]
 students=[course['students'] for course in courses]
 Chromosone.profs =profs
 classesNum= len(Chromosone.classes)
-generateChromosone(courses, timeslots, profs, rooms, population)
 
+chromPopulation= []
 
+for i in range(population):
+    chromPopulation.append(generateChromosone(courses, timeslots, profs, rooms, population))
+
+tournamentSelection(chromPopulation)
 
 
 
