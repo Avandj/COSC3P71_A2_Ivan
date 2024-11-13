@@ -29,7 +29,7 @@ def generateChromosone(courses, timeslots, profs, rooms, population):
 
 def printChromosone(chromosone):
 
-    for i, gene in enumerate(chromosone.classes):
+    for i, gene in enumerate(chromosone.getClassList()):
         print(f"{i + 1}: Course: {gene.course}, Time: {gene.time}, Prof: {gene.prof}, Room: {gene.room}")
 
 def tournamentSelection(population):

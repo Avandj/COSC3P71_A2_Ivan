@@ -52,3 +52,6 @@ class Chromosone:
     def getFitness(self):
         return self.fitness
 
+    def getClassList(self):
+        return self.classList
+
