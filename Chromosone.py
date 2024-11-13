@@ -55,3 +55,18 @@ class Chromosone:
     def getClassList(self):
         return self.classList
 
+# Comparison methods based on the fitness for max-heap
+    def __lt__(self, other):
+        # For max-heap, compares by negative fitness this makes sure that we get a max heap and not a min heap if the negative wasnt incliuded
+        return -self.fitness < -other.fitness
+
+    def __le__(self, other):
+
+        return -self.getFitness() <= other.getFitness()
+
+    def __gt__(self, other):
+
+        return -self.getFitness() > other.getFitness()
+
+    def __ge__(self, other):
+        return -self.getFitness() >= other.getFitness()

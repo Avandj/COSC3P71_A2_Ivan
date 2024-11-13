@@ -23,7 +23,7 @@ def generateChromosone(courses, timeslots, profs, rooms, population):
     #for i in range(len(classes)):
         ##print(str(i+1)+" "+str(classes[i].course)+", "+str(classes[i].time)+", "+str(classes[i].prof)+", "+str(classes[i].room)+"\n")
 
-    print(chromosone.getFitness())
+    #print(chromosone.getFitness())
 
     return chromosone
 
@@ -40,13 +40,17 @@ def tournamentSelection(population):
 
     bestChromosone = max(tournament, key=lambda chrom: chrom.getFitness())
 
-    printChromosone(bestChromosone)
+
+    #printChromosone(bestChromosone)
 
     return bestChromosone
 
 
+#crossOvrRate=float(input("Enter your Crossover Rate: "))
+#elitismRate=float(input("Enter your Elitism Rate: "))
 
-
+crossoverRate=0;
+elitismRate=0.2
 courses = []
 rooms = []
 timeslots = []
@@ -95,10 +99,34 @@ classesNum= len(Chromosone.classes)
 
 chromPopulation= []
 
-for i in range(population):
-    chromPopulation.append(generateChromosone(courses, timeslots, profs, rooms, population))
 
+for i in range(population):
+    tempChrom=generateChromosone(courses, timeslots, profs, rooms, population)
+    heapq.heappush(chromPopulation, tempChrom)
+
+heapq.heapify(chromPopulation)
+
+for i in range(population):
+    print(str(chromPopulation[i].getFitness()))
+print("\n")
+
+#Make initial random population
 tournamentSelection(chromPopulation)
 
+#Make new generation
+newParents= []
+elitism = int(population*elitismRate)
 
+
+
+for i in range(elitism):
+    heapq.heappush(newParents, chromPopulation[i])
+
+for i in range(int(population-elitism)):
+    tempWinner= tournamentSelection(chromPopulation)
+    heapq.heappush(newParents, tempWinner)
+    #print(str(tempWinner.getFitness()))
+
+for i in range(len(newParents)):
+    print(newParents[i].getFitness())
 
