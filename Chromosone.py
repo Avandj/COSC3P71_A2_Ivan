@@ -14,8 +14,19 @@ class Chromosone:
         conflicts = 0
         roomUsage = {}
         profSchedule = {}
+        days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'] #days in the week to make it easier to compare times
+
+        # A dict that keeps track of the time slots for each day
+        slotsPDay = {}
+        for slot in Chromosone.times:
+            day = slot['day']
+            if day not in slotsPDay:
+                slotsPDay[day] = 0
+            slotsPDay[day] += 1
 
         for classO in self.classList:
+
+
 
             course = classO.course
             room = classO.room
@@ -29,7 +40,9 @@ class Chromosone:
 
             for hour in range(duration):
 
-                current_slot = timeSlot['hour'] + hour
+                day_index = days.index(timeSlot['day'])  # Maps the day for the class to a index from 0-4 represenrting monday to friday
+                current_slot = day_index * slotsPDay[timeSlot['day']] + timeSlot['hour'] + hour
+
                 if (room['name'], current_slot) not in roomUsage:
                     roomUsage[(room['name'], current_slot)] = 0
                 roomUsage[(room['name'], current_slot)] += 1
@@ -49,24 +62,10 @@ class Chromosone:
         # Calculate fitness score: higher score for fewer conflicts
         return 1 / (1 + conflicts)
 
+
+
     def getFitness(self):
         return self.fitness
 
     def getClassList(self):
         return self.classList
-
-# Comparison methods based on the fitness for max-heap
-    def __lt__(self, other):
-        # For max-heap, compares by negative fitness this makes sure that we get a max heap and not a min heap if the negative wasnt incliuded
-        return -self.fitness < -other.fitness
-
-    def __le__(self, other):
-
-        return -self.getFitness() <= other.getFitness()
-
-    def __gt__(self, other):
-
-        return -self.getFitness() > other.getFitness()
-
-    def __ge__(self, other):
-        return -self.getFitness() >= other.getFitness()
