@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="79a88295-d8b4-4d8c-b71e-d00f96ce5371" name="Changes" comment="Finished fitness function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chromosone.py" beforeDir="false" afterPath="$PROJECT_DIR$/Chromosone.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +36,7 @@
   }
 }</component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -91,7 +90,7 @@
       <workItem from="1730676238806" duration="26111000" />
       <workItem from="1730912542945" duration="12869000" />
       <workItem from="1731104980340" duration="17995000" />
-      <workItem from="1731366448916" duration="33469000" />
+      <workItem from="1731366448916" duration="34433000" />
     </task>
     <task id="LOCAL-00001" summary="got rid of Courses.txt that i didnt need in there">
       <option name="closed" value="true" />
@@ -224,7 +223,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/COSC3P71_A2_Ivan$ClassObj.coverage" NAME="ClassObj Coverage Results" MODIFIED="1730916774772" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/COSC3P71_A2_Ivan$Main.coverage" NAME="Main Coverage Results" MODIFIED="1731547869780" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/COSC3P71_A2_Ivan$Main.coverage" NAME="Main Coverage Results" MODIFIED="1731549916220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/COSC3P71_A2_Ivan$Gene.coverage" NAME="Gene Coverage Results" MODIFIED="1731261766664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/COSC3P71_A2_Ivan$Chromosone.coverage" NAME="Chromosone Coverage Results" MODIFIED="1731528159383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

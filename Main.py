@@ -45,11 +45,22 @@ def tournamentSelection(population):
 
     return bestChromosone
 
-'''
+
 def crossover(parent1, parent2):
-    mask=random.choice(0,2)
-    for (int i=)
-'''
+
+    mask=None
+    while(True):
+        mask=""
+        for i in range(3):
+            mask+=str(random.choice([0,1]))
+
+        if(mask!="111"):
+            break
+
+
+
+
+
 #crossOvrRate=float(input("Enter your Crossover Rate: "))
 #elitismRate=float(input("Enter your Elitism Rate: "))
 
