@@ -30,7 +30,7 @@ def generateChromosone(courses, timeslots, profs, rooms, population):
 def printChromosone(chromosone):
 
     for i, gene in enumerate(chromosone.getClassList()):
-        print(f"{i + 1}: Course: {gene.course}, Time: {gene.time}, Prof: {gene.prof}, Room: {gene.room}")
+        print(f" {i + 1}:{gene.course},{gene.time},{gene.room}")
 
 def tournamentSelection(population):
     k=3
@@ -50,11 +50,33 @@ def crossover(parent1, parent2):
 
     mask=None
 
+    child1=Chromosone()
+    child2=Chromosone()
+
     mask=""
-    for i in range(len(parent1)):
+    for i in range(len(parent1.getClassList())):
         mask+=str(random.choice([0,1]))
 
+    #print(mask)
+    #print("Parent 1")
+    #printChromosone(parent1)
+    #print("\n")
+    #print("Parent 2")
+    #printChromosone(parent2)
+    #print("\n")
+
     for i in range(len(mask)):
+        if(mask[i]=='1'):
+            child1.addGene(parent1.getClassList()[i])
+            child2.addGene(parent2.getClassList()[i])
+        else:
+            child1.addGene(parent2.getClassList()[i])
+            child2.addGene(parent1.getClassList()[i])
+
+        child1.updateFitness()
+        child2.updateFitness()
+    return child1, child2
+
 
 
 
@@ -132,18 +154,34 @@ tournamentSelection(chromPopulation)
 
 #Make new generation
 newParents= []
-elitism = int(population*elitismRate)
+parentNum=population/2
+elitism = int(parentNum*elitismRate)
 
 
 
 for i in range(elitism):
     newParents.append(chromPopulation[i])
 
-for i in range(int(population-elitism)):
+
+for i in range(int(parentNum-elitism)):
     tempWinner= tournamentSelection(chromPopulation)
     newParents.append( tempWinner)
     #print(str(tempWinner.getFitness()))
 
 for i in range(len(newParents)):
     print(newParents[i].getFitness())
+
+chromPopulation=[]
+
+if len(newParents) >= 2:
+
+    child1, child2 = crossover(newParents[0], newParents[1])
+
+    # Add the resulting children to the chromPopulation
+    chromPopulation.append(child1)
+    chromPopulation.append(child2)
+    newParents.pop(0)
+    newParents.pop(1)
+
+else:
 

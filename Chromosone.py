@@ -10,11 +10,15 @@ class Chromosone:
             self.size = len(classList)
             self.fitness = self.calcFitness()
         else:
+            self.fitness = None
             self.classList = []
 
 
     def addGene(self,gene):
         self.classList.append(gene)
+
+    def updateFitness(self):
+        self.fitness = self.calcFitness();
 
 
     def calcFitness(self):
