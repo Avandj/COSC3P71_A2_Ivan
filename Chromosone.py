@@ -3,11 +3,18 @@ from Gene import Gene
 
 class Chromosone:
 
-    def __init__(self, classList):
-        self.classList = classList
-        self.size = len(classList)
-        self.fitness = self.calcFitness()
+    def __init__(self, classList=None):
 
+        if(classList != None):
+            self.classList = classList
+            self.size = len(classList)
+            self.fitness = self.calcFitness()
+        else:
+            self.classList = []
+
+
+    def addGene(self,gene):
+        self.classList.append(gene)
 
 
     def calcFitness(self):

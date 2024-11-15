@@ -49,13 +49,15 @@ def tournamentSelection(population):
 def crossover(parent1, parent2):
 
     mask=None
-    while(True):
-        mask=""
-        for i in range(3):
-            mask+=str(random.choice([0,1]))
 
-        if(mask!="111"):
-            break
+    mask=""
+    for i in range(len(parent1)):
+        mask+=str(random.choice([0,1]))
+
+    for i in range(len(mask)):
+
+
+
 
 
 
