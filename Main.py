@@ -82,11 +82,11 @@ def crossover(parent1, parent2):
 
 def genParents(chromPopulation, population, elitismRate):
 
+
     # Make new generation
     newParents = []
     parentNum = population / 2
     elitism = int(population * elitismRate)
-
 
 
 
@@ -165,8 +165,7 @@ chromPopulation = sorted(chromPopulation, key=lambda chrom: chrom.getFitness(), 
     #print(str(chromPopulation[i].getFitness()))
 #print("\n")
 
-#Make initial random population
-tournamentSelection(chromPopulation)
+
 
 
 
@@ -178,6 +177,7 @@ gen=0
 maxfitness=None
 
 while (chromPopulation[0].getFitness()!=1):
+    crossoverPop=0
     gen+=1
 
     chromPopulation = sorted(chromPopulation, key=lambda chrom: chrom.getFitness(), reverse=True)
@@ -187,14 +187,24 @@ while (chromPopulation[0].getFitness()!=1):
         bestChromosones.append(chromPopulation[i])
 
     maxfitness=bestChromosones[0].getFitness()
+
     newParents=genParents(chromPopulation, population, elitismRate)
     chromPopulation=[]
 
-    for i in range(len(bestChromosones)):
-        chromPopulation.append(bestChromosones[i])
+
+
+
+
+
+    parentPop = len(newParents)
+
+    if (parentPop % 2 == 0):
+        crossoverPop = parentPop
+    else:
+        crossoverPop = parentPop - 1
 
     #Loop for crossovers for parents
-    while (len(newParents)> 0):
+    for i in range(int(crossoverPop/2)):
 
         if len(newParents) >= 2:
             # Perform crossover on pairs of parents
@@ -214,6 +224,18 @@ while (chromPopulation[0].getFitness()!=1):
 
         chromPopulation.append(child1)
         chromPopulation.append(child2)
+
+    if(parentPop%2 == 1):
+        lastParent=newParents[0]
+        if random.random() < mutationRate:
+            lastParent.mutateClassL(rooms, timeslots)
+        chromPopulation.append(lastParent)
+        newParents.pop(0)
+
+    bestChromosones = sorted(bestChromosones, key=lambda chrom: chrom.getFitness(), reverse=True)
+    for i in range(len(bestChromosones)):
+        chromPopulation.append(bestChromosones[i])
+
     if(len(chromPopulation)!=population):
         print("Idiot")
     chromPopulation = sorted(chromPopulation, key=lambda chrom: chrom.getFitness(), reverse=True)
