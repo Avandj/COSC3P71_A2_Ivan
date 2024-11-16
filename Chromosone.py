@@ -73,6 +73,10 @@ class Chromosone:
         # Calculate fitness score: higher score for fewer conflicts
         return 1 / (1 + conflicts)
 
+    def mutateClassL(self, times,rooms):
+        for gene in self.classList:
+            gene.mutate(times, rooms)
+
 
 
     def getFitness(self):

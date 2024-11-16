@@ -1,9 +1,9 @@
 from Chromosone import Chromosone
 import random
 from Gene import Gene
-import heapq
 
-def generateChromosone(courses, timeslots, profs, rooms, population):
+
+def generateChromosone(courses, timeslots, profs, rooms):
     classes=[]
 
     for j in range(len(courses)):
@@ -88,8 +88,9 @@ def crossover(parent1, parent2):
 #crossOvrRate=float(input("Enter your Crossover Rate: "))
 #elitismRate=float(input("Enter your Elitism Rate: "))
 
-crossoverRate=0;
+crossoverRate=0
 elitismRate=0.2
+mutationRate=0.1
 courses = []
 rooms = []
 timeslots = []
@@ -140,7 +141,7 @@ chromPopulation= []
 
 
 for i in range(population):
-    tempChrom=generateChromosone(courses, timeslots, profs, rooms, population)
+    tempChrom=generateChromosone(courses, timeslots, profs, rooms)
     chromPopulation.append( tempChrom)
 
 chromPopulation = sorted(chromPopulation, key=lambda chrom: chrom.getFitness(), reverse=True)
@@ -157,31 +158,46 @@ newParents= []
 parentNum=population/2
 elitism = int(parentNum*elitismRate)
 
+#Generate new generation
+
+while(chromPopulation!=1):
+    for i in range(elitism):
+        newParents.append(chromPopulation[i])
 
 
-for i in range(elitism):
-    newParents.append(chromPopulation[i])
+    for i in range(int(parentNum-elitism)):
+        tempWinner= tournamentSelection(chromPopulation)
+        newParents.append( tempWinner)
+        #print(str(tempWinner.getFitness()))
+
+    for i in range(len(newParents)):
+        print(newParents[i].getFitness())
 
 
-for i in range(int(parentNum-elitism)):
-    tempWinner= tournamentSelection(chromPopulation)
-    newParents.append( tempWinner)
-    #print(str(tempWinner.getFitness()))
 
-for i in range(len(newParents)):
-    print(newParents[i].getFitness())
 
-chromPopulation=[]
 
-if len(newParents) >= 2:
+    while (chromPopulation[0].getFitness()>0):
 
-    child1, child2 = crossover(newParents[0], newParents[1])
+        bestChromosone = chromPopulation[0]
 
-    # Add the resulting children to the chromPopulation
-    chromPopulation.append(child1)
-    chromPopulation.append(child2)
-    newParents.pop(0)
-    newParents.pop(1)
+        chromPopulation = []
 
-else:
+        if len(newParents) >= 2:
+            child1, child2 = crossover(newParents[0], newParents[1])
+        else:
+            child1, child2 = crossover(newParents[0], bestChromosone)
+
+
+        if random.random() < mutationRate:
+            child1.mutateClassL(rooms, timeslots)
+
+        if random.random() < mutationRate:
+            child2.mutateClassL(rooms, timeslots)
+
+        chromPopulation.append(child1)
+        chromPopulation.append(child2)
+        newParents.pop(0)
+        newParents.pop(0)
+
 
