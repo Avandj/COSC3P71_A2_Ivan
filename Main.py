@@ -3,6 +3,8 @@ import random
 from Gene import Gene
 
 
+
+
 def generateChromosone(courses, timeslots, profs, rooms):
     classes=[]
 
@@ -21,7 +23,7 @@ def generateChromosone(courses, timeslots, profs, rooms):
     chromosone=Chromosone(classes)
 
     #for i in range(len(classes)):
-        ##print(str(i+1)+" "+str(classes[i].course)+", "+str(classes[i].time)+", "+str(classes[i].prof)+", "+str(classes[i].room)+"\n")
+    ##print(str(i+1)+" "+str(classes[i].course)+", "+str(classes[i].time)+", "+str(classes[i].prof)+", "+str(classes[i].room)+"\n")
 
     #print(chromosone.getFitness())
 
@@ -78,11 +80,24 @@ def crossover(parent1, parent2):
     return child1, child2
 
 
+def genParents(chromPopulation, population, elitismRate):
+
+    # Make new generation
+    newParents = []
+    parentNum = population / 2
+    elitism = int(population * elitismRate)
 
 
 
 
+    for i in range(int(population-elitism)):
+        tempWinner = tournamentSelection(chromPopulation)
+        newParents.append(tempWinner)
+        # print(str(tempWinner.getFitness()))
 
+    #for i in range(len(newParents)):
+        #print(newParents[i].getFitness())
+    return newParents
 
 
 #crossOvrRate=float(input("Enter your Crossover Rate: "))
@@ -127,8 +142,8 @@ with open("t1/timeslots.txt", "r") as file:
             "hour": int(hour)
         })
 
-population= 2*len(courses)
-print(population)
+population= 4*len(courses)
+#print(population)
 Chromosone.classes = courses
 Chromosone.rooms = rooms
 Chromosone.times = timeslots
@@ -146,47 +161,49 @@ for i in range(population):
 
 chromPopulation = sorted(chromPopulation, key=lambda chrom: chrom.getFitness(), reverse=True)
 
-for i in range(population):
-    print(str(chromPopulation[i].getFitness()))
-print("\n")
+#for i in range(population):
+    #print(str(chromPopulation[i].getFitness()))
+#print("\n")
 
 #Make initial random population
 tournamentSelection(chromPopulation)
 
-#Make new generation
-newParents= []
-parentNum=population/2
-elitism = int(parentNum*elitismRate)
-
-#Generate new generation
-
-while(chromPopulation!=1):
-    for i in range(elitism):
-        newParents.append(chromPopulation[i])
-
-
-    for i in range(int(parentNum-elitism)):
-        tempWinner= tournamentSelection(chromPopulation)
-        newParents.append( tempWinner)
-        #print(str(tempWinner.getFitness()))
-
-    for i in range(len(newParents)):
-        print(newParents[i].getFitness())
 
 
 
 
 
-    while (chromPopulation[0].getFitness()>0):
+print("Calculating...")
+gen=0
+maxfitness=None
 
-        bestChromosone = chromPopulation[0]
+while (chromPopulation[0].getFitness()!=1):
+    gen+=1
 
-        chromPopulation = []
+    chromPopulation = sorted(chromPopulation, key=lambda chrom: chrom.getFitness(), reverse=True)
+    bestChromosones = []
+
+    for i in range(int(population* elitismRate)):
+        bestChromosones.append(chromPopulation[i])
+
+    maxfitness=bestChromosones[0].getFitness()
+    newParents=genParents(chromPopulation, population, elitismRate)
+    chromPopulation=[]
+
+    for i in range(len(bestChromosones)):
+        chromPopulation.append(bestChromosones[i])
+
+    #Loop for crossovers for parents
+    while (len(newParents)> 0):
 
         if len(newParents) >= 2:
+            # Perform crossover on pairs of parents
             child1, child2 = crossover(newParents[0], newParents[1])
+            newParents.pop(0)
+            newParents.pop(0)
         else:
-            child1, child2 = crossover(newParents[0], bestChromosone)
+            child1, child2 = crossover(newParents[0], chromPopulation[0])
+            newParents.pop(0)
 
 
         if random.random() < mutationRate:
@@ -197,7 +214,14 @@ while(chromPopulation!=1):
 
         chromPopulation.append(child1)
         chromPopulation.append(child2)
-        newParents.pop(0)
-        newParents.pop(0)
+    if(len(chromPopulation)!=population):
+        print("Idiot")
+    chromPopulation = sorted(chromPopulation, key=lambda chrom: chrom.getFitness(), reverse=True)
+    if(chromPopulation[0].getFitness()!=maxfitness):
+        print(str(gen)+": "+str(chromPopulation[0].getFitness()))
+
+    maxfitness=chromPopulation[0].getFitness()
+
+
 
 
