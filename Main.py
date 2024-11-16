@@ -103,9 +103,9 @@ def genParents(chromPopulation, population, elitismRate):
 #crossOvrRate=float(input("Enter your Crossover Rate: "))
 #elitismRate=float(input("Enter your Elitism Rate: "))
 
-crossoverRate=0
-elitismRate=0.2
-mutationRate=0.1
+crossoverRate = 0.7
+elitismRate = 0.1
+mutationRate = 0.2
 courses = []
 rooms = []
 timeslots = []
@@ -142,7 +142,7 @@ with open("t1/timeslots.txt", "r") as file:
             "hour": int(hour)
         })
 
-population= 4*len(courses)
+population= 10*len(courses)
 #print(population)
 Chromosone.classes = courses
 Chromosone.rooms = rooms

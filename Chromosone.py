@@ -76,6 +76,7 @@ class Chromosone:
     def mutateClassL(self, times,rooms):
         for gene in self.classList:
             gene.mutate(times, rooms)
+        self.updateFitness()
 
 
 
