@@ -20,57 +20,51 @@ class Chromosone:
     def updateFitness(self):
         self.fitness = self.calcFitness();
 
-
     def calcFitness(self):
         conflicts = 0
         roomUsage = {}
         profSchedule = {}
-        days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'] #days in the week to make it easier to compare times
+        days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']  # Days of the week
 
-        # A dict that keeps track of the time slots for each day
-        slotsPDay = {}
+        # Dictionary to track time slots for each day
+        slotsPDay = {day: 0 for day in days}
+
         for slot in Chromosone.times:
             day = slot['day']
-            if day not in slotsPDay:
-                slotsPDay[day] = 0
             slotsPDay[day] += 1
 
         for classO in self.classList:
-
-
-
             course = classO.course
             room = classO.room
             timeSlot = classO.time
-            students =classO.students
-            proffessor = classO.prof
+            students = classO.students
+            professor = classO.prof
             duration = classO.duration
 
-            if (students > room['capacity']):
+            # Check for room capacity conflict
+            if students > room['capacity']:
                 conflicts += 2
 
             for hour in range(duration):
-
-                day_index = days.index(timeSlot['day'])  # Maps the day for the class to a index from 0-4 represenrting monday to friday
+                # Map the day to an index from 0 to 4 (Monday to Friday)
+                day_index = days.index(timeSlot['day'])
                 current_slot = day_index * slotsPDay[timeSlot['day']] + timeSlot['hour'] + hour
 
+                # Room usage conflicts
                 if (room['name'], current_slot) not in roomUsage:
                     roomUsage[(room['name'], current_slot)] = 0
                 roomUsage[(room['name'], current_slot)] += 1
-
-                #checks for conflics for the rooms
                 if roomUsage[(room['name'], current_slot)] > 1:
                     conflicts += 3
 
-                if (proffessor, current_slot) not in profSchedule:
-                    profSchedule[(proffessor, current_slot)] = 0
-                profSchedule[(proffessor, current_slot)] += 1
-
-                # Checks for professor conflicts
-                if profSchedule[(proffessor, current_slot)] > 1:
+                # Professor schedule conflicts
+                if (professor, current_slot) not in profSchedule:
+                    profSchedule[(professor, current_slot)] = 0
+                profSchedule[(professor, current_slot)] += 1
+                if profSchedule[(professor, current_slot)] > 1:
                     conflicts += 1
 
-        # Calculate fitness score: higher score for fewer conflicts
+        # Fitness score: Higher score for fewer conflicts
         return 1 / (1 + conflicts)
 
     def mutateClassL(self, times,rooms):

@@ -37,6 +37,7 @@ def printChromosone(chromosone):
 def tournamentSelection(population):
     k = 3
 
+
     tournament = random.sample(population, k)
 
     bestChromosone = max(tournament, key=lambda chrom: chrom.getFitness())
@@ -77,13 +78,13 @@ def crossover(parent1, parent2):
     return child1, child2
 
 
-def genParents(chromPopulation, population, elitismRate):
+def genParents(chromPopulation):
     # Make new generation
     newParents = []
-    parentNum = population / 2
-    elitism = int(population * elitismRate)
+    parentNum = int(len(chromPopulation))
 
-    for i in range(int(population - elitism)):
+
+    for i in range(parentNum):
         tempWinner = tournamentSelection(chromPopulation)
         newParents.append(tempWinner)
         # print(str(tempWinner.getFitness()))
@@ -93,12 +94,66 @@ def genParents(chromPopulation, population, elitismRate):
     return newParents
 
 
+def evolvePopulation(population, elitismRate, mutationRate, crossoveRate):
+    # Sort population by fitness (descending)
+    population.sort(key=lambda chrom: chrom.getFitness(), reverse=True)
+
+    newPopulation = []
+
+    elites=[]
+
+    for i in range(int(elitismRate*len(population))):
+        elites.append(population[i])
+
+    # Generate new parents
+    new_parents = genParents(population)
+
+
+
+
+    # Perform crossover to generate children
+
+    for i in range(0, len(new_parents) - 1, 2):
+
+        if(random.random() < crossoveRate):
+            child1, child2 = crossover(new_parents[i], new_parents[i+1])
+        else:
+            child1, child2 = new_parents[i], new_parents[i + 1]
+
+
+
+
+        # Apply mutation with a certain probability
+        if random.random() < mutationRate:
+            child1.mutateClassL(Chromosone.rooms, Chromosone.times)
+
+        if random.random() < mutationRate:
+            child2.mutateClassL(Chromosone.rooms, Chromosone.times)
+
+        newPopulation.append(child1)
+        newPopulation.append(child2)
+
+    newPopulation.sort(key=lambda chrom: chrom.getFitness(), reverse=False)
+    for i in range(len(elites)):
+        newPopulation.pop(0)
+        newPopulation.append(elites[i])
+
+    # Ensure the new population size matches the original
+    while len(newPopulation) != len(population):
+        print("bad pop")
+
+    newPopulation = sorted(newPopulation, key=lambda chrom: chrom.getFitness(), reverse=True)
+
+    return newPopulation
+
+
 # crossOvrRate=float(input("Enter your Crossover Rate: "))
 # elitismRate=float(input("Enter your Elitism Rate: "))
 
-crossoverRate = 0.7
-elitismRate = 0.1
-mutationRate = 0.2
+
+crossoverRate = 0.9
+elitismRate = 0.01
+mutationRate = 0.02
 courses = []
 rooms = []
 timeslots = []
@@ -135,7 +190,7 @@ with open("t1/timeslots.txt", "r") as file:
             "hour": int(hour)
         })
 
-population = 10 * len(courses)
+population = 250
 # print(population)
 Chromosone.classes = courses
 Chromosone.rooms = rooms
@@ -157,71 +212,33 @@ chromPopulation = sorted(chromPopulation, key=lambda chrom: chrom.getFitness(), 
 # print(str(chromPopulation[i].getFitness()))
 # print("\n")
 
-# Make initial random population
-tournamentSelection(chromPopulation)
+
 
 print("Calculating...")
 gen = 0
-maxfitness = None
+maxfitness = 0.0
 crossoverPop = 0
 
-while (chromPopulation[0].getFitness() != 1):
+
+
+
+while (maxfitness != 1):
+
+
+
+
+
+    chromPopulation= evolvePopulation(chromPopulation, elitismRate, mutationRate, crossoverRate)
+
+    tempMax=chromPopulation[0].getFitness()
+
+    if(maxfitness <tempMax):
+        maxfitness=chromPopulation[0].getFitness()
+
+    print("Gen" + str(gen) + ": " + str(maxfitness))
 
     gen += 1
 
-    chromPopulation = sorted(chromPopulation, key=lambda chrom: chrom.getFitness(), reverse=True)
-    bestChromosones = []
 
-    for i in range(int(population * elitismRate)):
-        bestChromosones.append(chromPopulation[i])
 
-    maxfitness = bestChromosones[0].getFitness()
-    newParents = genParents(chromPopulation, population, elitismRate)
-    chromPopulation = []
-
-    for i in range(len(bestChromosones)):
-        chromPopulation.append(bestChromosones[i])
-
-    parentPop = len(newParents)
-
-    if (parentPop % 2 == 0):
-        crossoverPop = parentPop
-    else:
-        crossoverPop = parentPop - 1
-
-    # Loop for crossovers for parents
-    for i in range(int(crossoverPop / 2)):
-
-        if len(newParents) >= 2:
-            # Perform crossover on pairs of parents
-            child1, child2 = crossover(newParents[0], newParents[1])
-            newParents.pop(0)
-            newParents.pop(0)
-        else:
-            child1, child2 = crossover(newParents[0], chromPopulation[0])
-            newParents.pop(0)
-
-        if random.random() < mutationRate:
-            child1.mutateClassL(rooms, timeslots)
-
-        if random.random() < mutationRate:
-            child2.mutateClassL(rooms, timeslots)
-
-        chromPopulation.append(child1)
-        chromPopulation.append(child2)
-
-    if (parentPop % 2 == 1):
-        lastParent = newParents[0]
-        if random.random() < mutationRate:
-            lastParent.mutateClassL(rooms, timeslots)
-        chromPopulation.append(lastParent)
-        newParents.pop(0)
-
-    if (len(chromPopulation) != population):
-        print("Idiot")
-    chromPopulation = sorted(chromPopulation, key=lambda chrom: chrom.getFitness(), reverse=True)
-    if (chromPopulation[0].getFitness() != maxfitness):
-        print(str(gen) + ": " + str(chromPopulation[0].getFitness()))
-
-    maxfitness = chromPopulation[0].getFitness()
 
