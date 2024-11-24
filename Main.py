@@ -3,21 +3,27 @@ import random
 from Gene import Gene
 
 
-def generateChromosone(courses, timeslots, profs, rooms):
+def generateChromosone(courses, timeslots, rooms):
     classes = []
+
+    unique_days = list(set(slot['day'] for slot in timeslots))
 
     for j in range(len(courses)):
         course_index = j
-        time_index = random.randint(0, len(timeslots) - 1)
-        prof_index = j
-        students = courses[course_index]['students']
-        room_index = random.randint(0, len(rooms) - 1)
-        course_name = courses[course_index]['name']
-        duration = courses[course_index]['duration']
+        day_index = (random.choice(unique_days))
 
-        classes.append(
-            Gene(course=course_name, time=timeslots[time_index], prof=profs[prof_index], room=rooms[room_index],
-                 students=students, duration=duration))
+        available_slots = [i for i, slot in enumerate(timeslots) if slot["day"] == day_index]
+        time_index = random.choice(available_slots)
+        suitable_rooms = [room for room in rooms if room["capacity"] >= courses[j]["students"]]
+        if not suitable_rooms:
+            raise ValueError(f"No suitable room found for course {courses[j]['name']} with {courses[i]['students']} students.")
+
+        room_index = rooms.index(random.choice(suitable_rooms))  # Select a random suitable room
+
+        newGene = Gene(j, time_index, day_index, room_index)
+
+        classes.append(newGene)
+
 
     chromosone = Chromosone(classes)
 
@@ -28,11 +34,21 @@ def generateChromosone(courses, timeslots, profs, rooms):
 
     return chromosone
 
-
-def printChromosone(chromosone):
+def printChromosone(chromosone, courses, timeslots, rooms):
     for i, gene in enumerate(chromosone.getClassList()):
-        print(f" {i + 1}:{gene.course},{gene.time},{gene.room}")
+        # Extract day and hour from timeslots using gene indices
+        day = timeslots[gene.time]['day']
+        hour = timeslots[gene.time]['hour']
 
+        # Extract course name and room name
+        course_name = courses[gene.course]['name']
+        room_name = rooms[gene.room]['name']
+
+        # Format the time string
+        time = f"{day}: {hour}pm"
+
+        # Print details
+        print(f" {i + 1}: {course_name}, {time}, {room_name}")
 
 def tournamentSelection(population):
     k = 3
@@ -45,7 +61,6 @@ def tournamentSelection(population):
     # printChromosone(bestChromosone)
 
     return bestChromosone
-
 
 def crossover(parent1, parent2):
     mask = None
@@ -77,7 +92,6 @@ def crossover(parent1, parent2):
         child2.updateFitness()
     return child1, child2
 
-
 def genParents(chromPopulation):
     # Make new generation
     newParents = []
@@ -93,10 +107,13 @@ def genParents(chromPopulation):
     # print(newParents[i].getFitness())
     return newParents
 
-
-def evolvePopulation(population, elitismRate, mutationRate, crossoveRate):
+def evolvePopulation(population, elitismRate, mutationRate, crossoveRate, gen):
     # Sort population by fitness (descending)
     population.sort(key=lambda chrom: chrom.getFitness(), reverse=True)
+
+    if (gen > 1000):
+        mutationRate = 0.25
+        crossoveRate = 0.95
 
     newPopulation = []
 
@@ -125,10 +142,10 @@ def evolvePopulation(population, elitismRate, mutationRate, crossoveRate):
 
         # Apply mutation with a certain probability
         if random.random() < mutationRate:
-            child1.mutateClassL(Chromosone.rooms, Chromosone.times)
+            child1.mutateClassL()
 
         if random.random() < mutationRate:
-            child2.mutateClassL(Chromosone.rooms, Chromosone.times)
+            child2.mutateClassL()
 
         newPopulation.append(child1)
         newPopulation.append(child2)
@@ -153,34 +170,56 @@ def evolvePopulation(population, elitismRate, mutationRate, crossoveRate):
 
 crossoverRate = 0.9
 elitismRate = 0.01
-mutationRate = 0.02
+mutationRate = 0.05
+population =500
 courses = []
-rooms = []
-timeslots = []
 
-with open("t1/courses.txt", "r") as file:
+
+
+
+
+
+
+
+count=0
+with open("t2/courses.txt", "r") as file:
     next(file)
 
+    courses=[]
     for line in file:
         name, professor, students, duration = line.strip().split(",")
-        courses.append({
-            "name": name,
-            "professor": professor,
-            "students": int(students),
-            "duration": int(duration)
-        })
 
-with open("t1/rooms.txt", "r") as file:
+        # Creates a dict for each of the courses
+        course_dict = {
+            "name": name,
+            "prof": professor,
+            "students": int(students),
+            "dur": int(duration)
+        }
+
+        # Add the dictionary to the courses list
+        courses.append(course_dict)
+        count+=1
+
+
+
+rooms =[]
+
+with open("t2/rooms.txt", "r") as file:
     next(file)
 
     for line in file:
         name, capacity = line.strip().split(",")
+
+        # Add a dictionary for each room to the list
         rooms.append({
             "name": name,
             "capacity": int(capacity)
         })
 
-with open("t1/timeslots.txt", "r") as file:
+timeslots = []
+
+with open("t2/timeslots.txt", "r") as file:
     next(file)
 
     for line in file:
@@ -190,20 +229,18 @@ with open("t1/timeslots.txt", "r") as file:
             "hour": int(hour)
         })
 
-population = 250
-# print(population)
-Chromosone.classes = courses
+
+
+classesNum = len(courses)
+
+Chromosone.courses = courses
 Chromosone.rooms = rooms
-Chromosone.times = timeslots
-profs = [course['professor'] for course in courses]
-students = [course['students'] for course in courses]
-Chromosone.profs = profs
-classesNum = len(Chromosone.classes)
+Chromosone.timeslots = timeslots
 
 chromPopulation = []
 
 for i in range(population):
-    tempChrom = generateChromosone(courses, timeslots, profs, rooms)
+    tempChrom = generateChromosone(courses, timeslots, rooms)
     chromPopulation.append(tempChrom)
 
 chromPopulation = sorted(chromPopulation, key=lambda chrom: chrom.getFitness(), reverse=True)
@@ -228,7 +265,7 @@ while (maxfitness != 1):
 
 
 
-    chromPopulation= evolvePopulation(chromPopulation, elitismRate, mutationRate, crossoverRate)
+    chromPopulation= evolvePopulation(chromPopulation, elitismRate, mutationRate, crossoverRate, gen)
 
     tempMax=chromPopulation[0].getFitness()
 
@@ -239,6 +276,8 @@ while (maxfitness != 1):
 
     gen += 1
 
+
+printChromosone(chromPopulation[0], courses, timeslots, rooms)
 
 
 
