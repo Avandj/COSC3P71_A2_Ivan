@@ -111,9 +111,7 @@ def evolvePopulation(population, elitismRate, mutationRate, crossoveRate, gen):
     # Sort population by fitness (descending)
     population.sort(key=lambda chrom: chrom.getFitness(), reverse=True)
 
-    if (gen > 1000):
-        mutationRate = 0.25
-        crossoveRate = 0.95
+
 
     newPopulation = []
 
@@ -169,9 +167,9 @@ def evolvePopulation(population, elitismRate, mutationRate, crossoveRate, gen):
 
 
 crossoverRate = 0.9
-elitismRate = 0.01
+elitismRate = 0.1
 mutationRate = 0.05
-population =500
+population =1000
 courses = []
 
 
@@ -251,7 +249,7 @@ chromPopulation = sorted(chromPopulation, key=lambda chrom: chrom.getFitness(), 
 
 
 
-print("Calculating...")
+print("Calulating...")
 gen = 0
 maxfitness = 0.0
 crossoverPop = 0
@@ -269,10 +267,17 @@ while (maxfitness != 1):
 
     tempMax=chromPopulation[0].getFitness()
 
+    ##avg=0
+    ##for i in range(len(chromPopulation)):
+       ## avg+=chromPopulation[i].getFitness()
+
+    #avg/=len(chromPopulation)
+
+
     if(maxfitness <tempMax):
         maxfitness=chromPopulation[0].getFitness()
 
-    print("Gen" + str(gen) + ": " + str(maxfitness))
+    print("Gen" + str(gen) + ": " +str(maxfitness)+ "\t")
 
     gen += 1
 

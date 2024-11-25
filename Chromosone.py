@@ -106,6 +106,10 @@ class Chromosone:
         # Combine the conflict matrices (room and professor) to get the total number of conflicts
         totalConflicts = sum(sum(row) for row in roomConflictsM) + sum(sum(row) for row in profConflictsM)
 
+        status=False
+        if totalConflicts ==0:
+            return 1
+
         # Fitness score: Higher score for fewer conflicts
         return 1 / (1 + totalConflicts)
 
