@@ -131,29 +131,27 @@ def evolvePopulation(population, elitismRate, mutationRate, crossoveRate, gen):
     # Generate new parents
     new_parents = genParents(population)
 
-
-
-
+    random.shuffle(new_parents)
     # Perform crossover to generate children
 
-    for i in range(0, len(new_parents) - 1, 2):
+    for i in range(int(len(new_parents)/2)):
 
         best=[]
+
+
 
         if(random.random() < crossoveRate):
             child1, child2 =    uniformCrossover(new_parents[i], new_parents[i+1])
         else:
-            child1, child2 = new_parents[i], new_parents[i + 1]
+            child1, child2 = new_parents[i], new_parents[i+1]
 
 
 
 
         # Apply mutation with a certain probability
-        if random.random() < mutationRate:
-            child1.mutateClassL()
 
-        if random.random() < mutationRate:
-            child2.mutateClassL()
+        child1.mutateClassL(mutationRate)
+        child2.mutateClassL(mutationRate)
 
         best.append(child1)
         best.append(child2)
@@ -206,7 +204,7 @@ courses = []
 
 
 count=0
-with open("t2/courses.txt", "r") as file:
+with open("t1/courses.txt", "r") as file:
     next(file)
 
     courses=[]
@@ -229,7 +227,7 @@ with open("t2/courses.txt", "r") as file:
 
 rooms =[]
 
-with open("t2/rooms.txt", "r") as file:
+with open("t1/rooms.txt", "r") as file:
     next(file)
 
     for line in file:
@@ -243,7 +241,7 @@ with open("t2/rooms.txt", "r") as file:
 
 timeslots = []
 
-with open("t2/timeslots.txt", "r") as file:
+with open("t1/timeslots.txt", "r") as file:
     next(file)
 
     for line in file:
@@ -283,7 +281,7 @@ crossoverPop = 0
 
 
 
-while (maxfitness != 1 or gen<2000):
+while (maxfitness != 1 ):
 
 
 

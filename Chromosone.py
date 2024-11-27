@@ -113,11 +113,13 @@ class Chromosone:
         # Fitness score: Higher score for fewer conflicts
         return 1 / (1 + totalConflicts)
 
-    def mutateClassL(self):
-        ran = random.randint(0, len(self.classList) - 1)
+    def mutateClassL(self, mutationRate):
 
 
-        self.classList[ran].mutate( Chromosone.get_courses(), Chromosone.get_rooms(), Chromosone.get_timeslots())
+        i=random.randint(0, len(self.classList)-1)
+
+        if(random.random() < mutationRate):
+            self.classList[i].mutate( Chromosone.get_courses(), Chromosone.get_rooms(), Chromosone.get_timeslots())
 
         self.updateFitness()
 
