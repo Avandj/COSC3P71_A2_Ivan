@@ -39,6 +39,7 @@ class Chromosone:
         self.fitness = self.calcFitness()
 
     def calcFitness(self):
+        check=self.classList
         classN = len(self.classList)  # Number of classes in a Chromosone
 
         # Conflict matrices to track room and professor conflicts between pairs of classes
@@ -111,7 +112,8 @@ class Chromosone:
             return 1
 
         # Fitness score: Higher score for fewer conflicts
-        return 1 / (1 + totalConflicts)
+        fitness = 1 / (1 + totalConflicts)
+        return  fitness
 
     def mutateClassL(self, mutationRate):
 

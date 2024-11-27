@@ -55,7 +55,7 @@ def printChromosone(chromosone, courses, timeslots, rooms):
         print(f" {i + 1}: {course_name}, {time}, {room_name}")
 
 def tournamentSelection(population):
-    k = 4
+    k = 2
 
 
     tournament = random.sample(population, k)
@@ -160,7 +160,8 @@ def evolvePopulation(population, elitismRate, mutationRate, crossoveRate, gen):
 
         best.sort( key=lambda chrom: chrom.getFitness(), reverse=True)
 
-
+        #newPopulation.append(child1)
+        #newPopulation.append(child2)
 
         newPopulation.append(best[0])
         if(best[0].getFitness()!=best[1].getFitness()):
@@ -189,11 +190,11 @@ def evolvePopulation(population, elitismRate, mutationRate, crossoveRate, gen):
 # elitismRate=float(input("Enter your Elitism Rate: "))
 
 
-crossoverRate = 0.9
-elitismRate = 0.2
-mutationRate = 0.05
-population =50
-population=int(input("Enter your Population Size: "))
+crossoverRate = 0.95
+elitismRate = 0.01
+mutationRate = 0.2
+population =250
+#int(input("Enter your Population Size: "))
 courses = []
 
 
@@ -300,8 +301,7 @@ while (maxfitness != 1 ):
 
     if(maxfitness <tempMax):
         maxfitness=chromPopulation[0].getFitness()
-
-    print("Gen" + str(gen) + ": " +str(maxfitness)+ "\t"+str(avg))
+        print("Gen" + str(gen) + ": " +str(maxfitness)+ "\t"+str(avg))
 
     gen += 1
 
