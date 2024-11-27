@@ -5,36 +5,27 @@ from Gene import Gene
 
 def generateChromosone(courses, timeslots, rooms):
     classes = []
-
     unique_days = list(set(slot['day'] for slot in timeslots))
+    courseNum = len(courses)
 
-    courseNum=len(courses)
     for j in range(courseNum):
         course_index = j
-        day_index = (random.choice(unique_days))
-
+        day_index = random.choice(unique_days)
         available_slots = [i for i, slot in enumerate(timeslots) if slot["day"] == day_index]
         time_index = random.choice(available_slots)
         suitable_rooms = [room for room in rooms if room["capacity"] >= courses[j]["students"]]
+
         if not suitable_rooms:
-            raise ValueError(f"No suitable room found for course {courses[j]['name']} with {courses[i]['students']} students.")
+            raise ValueError(f"No suitable room found for course {courses[j]['name']} with {courses[j]['students']} students.")
 
         room_index = rooms.index(random.choice(suitable_rooms))  # Select a random suitable room
-
         newGene = Gene(j, time_index, day_index, room_index)
-
         classes.append(newGene)
-
 
     chromosone = Chromosone(classes)
 
-    # for i in range(len(classes)):
-    ##print(str(i+1)+" "+str(classes[i].course)+", "+str(classes[i].time)+", "+str(classes[i].prof)+", "+str(classes[i].room)+"\n")
-
-    # print(chromosone.getFitness())
-
-    if(courseNum !=len(chromosone.getClassList())):
-        print("Error")
+    if courseNum != len(chromosone.getClassList()):
+        print("Error: Mismatch in number of courses and genes in chromosome.")
 
     return chromosone
 
@@ -118,70 +109,31 @@ def genParents(chromPopulation):
     # print(newParents[i].getFitness())
     return newParents
 
-def evolvePopulation(population, elitismRate, mutationRate, crossoveRate, gen):
-
-
-
-
+def evolvePopulation(population, elitismRate, mutationRate, crossoverRate, gen):
     newPopulation = []
+    elitismNum = int(elitismRate * len(population))
+    elites = population[:elitismNum]
 
-    elitsmNum=int(elitismRate*len(population))
-    elites = population[:elitsmNum]
-
-    # Generate new parents
     new_parents = genParents(population)
-
     random.shuffle(new_parents)
-    # Perform crossover to generate children
 
-    for i in range(int(len(new_parents)/2)):
-
-        best=[]
-
-
-
-        if(random.random() < crossoveRate):
-            child1, child2 =    uniformCrossover(new_parents[i], new_parents[i+1])
+    for i in range(0, len(new_parents), 2):
+        if i + 1 < len(new_parents) and random.random() < crossoverRate:
+            child1, child2 = uniformCrossover(new_parents[i], new_parents[i + 1])
         else:
-            child1, child2 = new_parents[i], new_parents[i+1]
-
-
-
-
-        # Apply mutation with a certain probability
+            child1, child2 = new_parents[i], new_parents[i + 1]
 
         child1.mutateClassL(mutationRate)
         child2.mutateClassL(mutationRate)
 
-        best.append(child1)
-        best.append(child2)
-        best.append(new_parents[i])
-        best.append(new_parents[i+1])
+        newPopulation.append(child1)
+        newPopulation.append(child2)
 
-        best.sort( key=lambda chrom: chrom.getFitness(), reverse=True)
-
-        #newPopulation.append(child1)
-        #newPopulation.append(child2)
-
-        newPopulation.append(best[0])
-        if(best[0].getFitness()!=best[1].getFitness()):
-            newPopulation.append(best[1])
-        else:
-            newPopulation.append(best[2])
-
-    for i in range(len(elites)):
-        newPopulation.append(elites[i])
-
-
-
+    newPopulation.extend(elites)
     newPopulation = sorted(newPopulation, key=lambda chrom: chrom.getFitness(), reverse=True)
 
-    for i in range(len(population),int( len(population)-len(elites)),-1):
-        newPopulation.pop(i)
-
     # Ensure the new population size matches the original
-    while len(newPopulation) != len(population):
-        print("bad pop")
+    newPopulation = newPopulation[:len(population)]
 
     return newPopulation
 
@@ -193,7 +145,9 @@ def evolvePopulation(population, elitismRate, mutationRate, crossoveRate, gen):
 crossoverRate = 0.95
 elitismRate = 0.01
 mutationRate = 0.2
+
 population =250
+print(str(population))
 #int(input("Enter your Population Size: "))
 courses = []
 
@@ -301,7 +255,8 @@ while (maxfitness != 1 ):
 
     if(maxfitness <tempMax):
         maxfitness=chromPopulation[0].getFitness()
-        print("Gen" + str(gen) + ": " +str(maxfitness)+ "\t"+str(avg))
+
+    print("Gen" + str(gen) + ": " +str(maxfitness)+ "\t"+str(avg))
 
     gen += 1
 

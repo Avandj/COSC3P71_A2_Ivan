@@ -21,10 +21,6 @@ class Gene:
 
         suitable_rooms = [room for room in rooms if room["capacity"] >= courses[self.course]["students"]]
         if not suitable_rooms:
-            raise ValueError(
-                f"No suitable room found for course {courses[j]['name']} with {courses[i]['students']} students.")
+            raise ValueError(f"No suitable room found for course {courses[self.course]['name']} with {courses[self.course]['students']} students.")
 
-        room_index = rooms.index(random.choice(suitable_rooms))  # Select a random suitable room
-
-        # Optionally, if you need the room index instead of the room object:
-        self.room = room_index
+        self.room = rooms.index(random.choice(suitable_rooms))
