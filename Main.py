@@ -309,9 +309,9 @@ parameter_combinations = [
 
 
 # Function to run the GA and log results to W&B
-def run_experiment(name,crossover_rate, mutation_rate, elitism_rate, fileLoc):
+def run_experiment(runName,crossover_rate, mutation_rate, elitism_rate, fileLoc):
     # Initialize W&B run for tracking
-    wandb.init(project="course-scheduling", config={
+    wandb.init(project="course-scheduling",name=runName, config={
         "crossover_rate": crossover_rate,
         "mutation_rate": mutation_rate,
         "elitism_rate": elitism_rate,
@@ -334,7 +334,7 @@ def run_experiment(name,crossover_rate, mutation_rate, elitism_rate, fileLoc):
         json.dump(fitness_data, f)
 
     # Create a W&B artifact to upload the data
-    artifact = wandb.Artifact(f'fitness_data_{crossover_rate}_{mutation_rate}_{elitism_type}', type='dataset')
+    artifact = wandb.Artifact(f'fitness_data_{crossover_rate}_{mutation_rate}', type='dataset')
     artifact.add_file('fitness_data.json')
     wandb.log_artifact(artifact)
 
