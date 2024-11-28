@@ -7,7 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79a88295-d8b4-4d8c-b71e-d00f96ce5371" name="Changes" comment="Finished fitness function">
+    <list default="true" id="79a88295-d8b4-4d8c-b71e-d00f96ce5371" name="Changes" comment="Working on the report">
       <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132909-nwryorbx/files/config.yaml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132909-nwryorbx/files/output.log" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132909-nwryorbx/files/wandb-metadata.json" afterDir="false" />
@@ -293,7 +293,8 @@
     <MESSAGE value="Made the professors not be randomly generated and working on fitness func" />
     <MESSAGE value="Finished fitness function but idk if it works yet" />
     <MESSAGE value="Finished fitness function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished fitness function" />
+    <MESSAGE value="Working on the report" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working on the report" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
