@@ -8,6 +8,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79a88295-d8b4-4d8c-b71e-d00f96ce5371" name="Changes" comment="Finished fitness function">
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132909-nwryorbx/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132909-nwryorbx/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132909-nwryorbx/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132909-nwryorbx/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132909-nwryorbx/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132909-nwryorbx/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132909-nwryorbx/run-nwryorbx.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132914-uei5e7d5/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132914-uei5e7d5/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132914-uei5e7d5/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132914-uei5e7d5/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132914-uei5e7d5/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132914-uei5e7d5/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132914-uei5e7d5/run-uei5e7d5.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132933-08vpu0em/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132933-08vpu0em/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132933-08vpu0em/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132933-08vpu0em/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132933-08vpu0em/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132933-08vpu0em/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132933-08vpu0em/run-08vpu0em.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132953-0o7yh1ka/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132953-0o7yh1ka/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132953-0o7yh1ka/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132953-0o7yh1ka/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132953-0o7yh1ka/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132953-0o7yh1ka/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132953-0o7yh1ka/run-0o7yh1ka.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_133012-w9re44r7/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_133012-w9re44r7/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_133012-w9re44r7/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_133012-w9re44r7/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_133012-w9re44r7/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_133012-w9re44r7/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_133012-w9re44r7/run-w9re44r7.wandb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/COSC3P71_A2_Ivan.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/COSC3P71_A2_Ivan.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -47,13 +82,16 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2oMNNXww79Dyi0ZglBav4A6ozq2" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Python.Chromosone.executor": "Run",
     "Python.ClassObj.executor": "Run",
     "Python.Experiments.executor": "Run",
@@ -71,7 +109,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "aDefault",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -84,7 +122,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Main" type="PythonConfigurationType" factoryName="Python">
+    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="COSC3P71_A2_Ivan" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -93,12 +131,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="Main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -111,8 +148,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-PY-243.21565.199" />
-        <option value="bundled-python-sdk-cab1f2013843-4ae2d6a61b08-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.21565.199" />
+        <option value="bundled-python-sdk-975db3bf15a3-31b6be0877a2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.18034.82" />
       </set>
     </attachedChunks>
   </component>
@@ -251,6 +287,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="got rid of Courses.txt that i didnt need in there" />
     <MESSAGE value="commit" />
     <MESSAGE value="Made the professors not be randomly generated and working on fitness func" />
@@ -259,20 +296,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Finished fitness function" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Main.py</url>
-          <line>114</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Main.py</url>
-          <line>260</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="totalConflicts" />

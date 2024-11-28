@@ -291,18 +291,25 @@ geneticAlgorithm(crossoverRate, elitismRate, mutationRate, population,"t1/course
 
 # Define the parameter combinations
 parameter_combinations = [
-    {"crossover_rate": 1.0, "mutation_rate": 0.0, "elitism_rate": 1.0, "elitism_type": "full_elite"},
-    {"crossover_rate": 1.0, "mutation_rate": 0.1, "elitism_rate": 1.0, "elitism_type": "full_elite"},
-    {"crossover_rate": 0.9, "mutation_rate": 0.0, "elitism_rate": 1.0, "elitism_type": "full_elite"},
-    {"crossover_rate": 0.9, "mutation_rate": 0.1, "elitism_rate": 1.0, "elitism_type": "full_elite"},
+    {"crossover_rate": 1.0, "mutation_rate": 0.0, "elitism_rate": 1.0, "elitism_type": "full_elite", "file_loc":"t1"},
+    {"crossover_rate": 1.0, "mutation_rate": 0.1, "elitism_rate": 1.0, "elitism_type": "full_elite", "file_loc":"t1"},
+    {"crossover_rate": 0.9, "mutation_rate": 0.0, "elitism_rate": 1.0, "elitism_type": "full_elite", "file_loc":"t1"},
+    {"crossover_rate": 0.9, "mutation_rate": 0.1, "elitism_rate": 1.0, "elitism_type": "full_elite", "file_loc":"t1"},
     # Add your own best settings here
-    {"crossover_rate": 0.95, "mutation_rate": 0.05, "elitism_rate": 0.1, "elitism_type": "elite_percentage"}
+    {"crossover_rate": 0.95, "mutation_rate": 0.05, "elitism_rate": 0.1, "elitism_type": "elite_percentage", "file_loc":"t1"},
+
+{"crossover_rate": 1.0, "mutation_rate": 0.0, "elitism_rate": 1.0, "elitism_type": "full_elite", "file_loc":"t2"},
+    {"crossover_rate": 1.0, "mutation_rate": 0.1, "elitism_rate": 1.0, "elitism_type": "full_elite", "file_loc":"t1"},
+    {"crossover_rate": 0.9, "mutation_rate": 0.0, "elitism_rate": 1.0, "elitism_type": "full_elite", "file_loc":"t1"},
+    {"crossover_rate": 0.9, "mutation_rate": 0.1, "elitism_rate": 1.0, "elitism_type": "full_elite", "file_loc":"t1"},
+    # Add your own best settings here
+    {"crossover_rate": 0.95, "mutation_rate": 0.05, "elitism_rate": 0.1, "elitism_type": "elite_percentage", "file_loc":"t1"}
 ]
 
 
 # Function to run the GA and log results to W&B
 def run_experiment(crossover_rate, mutation_rate, elitism_rate, elitism_type, population=250, maxGen=100,
-                   courseFile="t1/courses.txt", roomsFile="t1/rooms.txt", timeslotFile="t1/timeslots.txt"):
+                   filesLocation):
     # Initialize W&B run for tracking
     wandb.init(project="course-scheduling", config={
         "crossover_rate": crossover_rate,
@@ -346,5 +353,6 @@ for i, params in enumerate(parameter_combinations):
         crossover_rate=params["crossover_rate"],
         mutation_rate=params["mutation_rate"],
         elitism_rate=params["elitism_rate"],
-        elitism_type=params["elitism_type"]
+        elitism_type=params["elitism_type"],
+        filesLocation=params["file_loc"]
     )

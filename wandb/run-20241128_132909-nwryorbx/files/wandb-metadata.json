@@ -1,0 +1,32 @@
+{
+  "os":  "Windows-10-10.0.19044-SP0",
+  "python":  "3.12.4",
+  "startedAt":  "2024-11-28T18:29:09.999881Z",
+  "program":  "C:\\Users\\ia21jx\\PycharmProjects\\COSC3P71_A2_Ivan\\Main.py",
+  "codePath":  "Main.py",
+  "git":  {
+    "remote":  "https://github.com/Avandj/COSC3P71_A2_Ivan.git",
+    "commit":  "d03dbf99051b3bb3daa3022abd88694a9b2e4129"
+  },
+  "email":  "ivanalc.oviedo@gmail.com",
+  "root":  "C:\\Users\\ia21jx\\PycharmProjects\\COSC3P71_A2_Ivan",
+  "host":  "LABS-WU63442-02",
+  "username":  "ia21jx",
+  "executable":  "C:\\Program Files\\Python312\\python.exe",
+  "codePathLocal":  "Main.py",
+  "cpu_count":  6,
+  "cpu_count_logical":  12,
+  "disk":  {
+    "/":  {
+      "total":  "252839981056",
+      "used":  "183772901376"
+    }
+  },
+  "memory":  {
+    "total":  "8404770816"
+  },
+  "cpu":  {
+    "count":  6,
+    "countLogical":  12
+  }
+}
