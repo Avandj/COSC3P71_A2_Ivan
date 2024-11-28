@@ -1,0 +1,10 @@
+250
+Traceback (most recent call last):
+  File "C:\Users\ia21jx\PycharmProjects\COSC3P71_A2_Ivan\Main.py", line 351, in <module>
+    run_experiment(
+  File "C:\Users\ia21jx\PycharmProjects\COSC3P71_A2_Ivan\Main.py", line 327, in run_experiment
+    geneticAlgorithm(crossover_rate, elitism_rate, mutation_rate, population, fileLoc,True)
+  File "C:\Users\ia21jx\PycharmProjects\COSC3P71_A2_Ivan\Main.py", line 180, in geneticAlgorithm
+    "dur": int(duration)
+           ^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '3`'

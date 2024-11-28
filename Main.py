@@ -140,16 +140,14 @@ def evolvePopulation(population, elitismRate, mutationRate, crossoverRate, gen):
 
     return newPopulation
 
-def geneticAlgorithm(crossoverRate, elitismRate, mutationRate, population, fileLoc, maxGen, isTest):
+def geneticAlgorithm(crossoverRate, elitismRate, mutationRate, population, fileLoc, isTest):
     # crossOvrRate=float(input("Enter your Crossover Rate: "))
     # elitismRate=float(input("Enter your Elitism Rate: "))
 
 
-    crossoverRate = 0.95
-    elitismRate = 0.01
-    mutationRate = 0.2
+    maxGen=1200
 
-    population =250
+
     print(str(population))
     #int(input("Enter your Population Size: "))
     courses = []
@@ -158,12 +156,16 @@ def geneticAlgorithm(crossoverRate, elitismRate, mutationRate, population, fileL
     maxFitnesList=[]
     avgFitnesList=[]
 
+    courseFile=fileLoc+"/courses.txt"
+    roomFile=fileLoc+"/rooms.txt"
+    timeslotsFile = fileLoc + "/timeslots.txt"
+
 
 
 
 
     count=0
-    with open("t1/courses.txt", "r") as file:
+    with open(courseFile, "r") as file:
         next(file)
 
         courses=[]
@@ -186,7 +188,7 @@ def geneticAlgorithm(crossoverRate, elitismRate, mutationRate, population, fileL
 
     rooms =[]
 
-    with open("t1/rooms.txt", "r") as file:
+    with open(roomFile, "r") as file:
         next(file)
 
         for line in file:
@@ -200,7 +202,7 @@ def geneticAlgorithm(crossoverRate, elitismRate, mutationRate, population, fileL
 
     timeslots = []
 
-    with open("t1/timeslots.txt", "r") as file:
+    with open(timeslotsFile, "r") as file:
         next(file)
 
         for line in file:
@@ -291,32 +293,30 @@ population =250
 
 # Define the parameter combinations
 parameter_combinations = [
-    {"crossover_rate": 1.0, "mutation_rate": 0.0, "elitism_rate": 1.0, "elitism_type": "full_elite", "file_loc":"t1"},
-    {"crossover_rate": 1.0, "mutation_rate": 0.1, "elitism_rate": 1.0, "elitism_type": "full_elite", "file_loc":"t1"},
-    {"crossover_rate": 0.9, "mutation_rate": 0.0, "elitism_rate": 1.0, "elitism_type": "full_elite", "file_loc":"t1"},
-    {"crossover_rate": 0.9, "mutation_rate": 0.1, "elitism_rate": 1.0, "elitism_type": "full_elite", "file_loc":"t1"},
-    # Add your own best settings here
-    {"crossover_rate": 0.95, "mutation_rate": 0.05, "elitism_rate": 0.1, "elitism_type": "elite_percentage", "file_loc":"t1"},
+    {"name": "T1 - Full Crossover, No Mutation", "crossover_rate": 1.0, "mutation_rate": 0.0, "elitism_rate": 1.0, "file_loc": "t1"},
+    {"name": "T1 - Full Crossover, 10% Mutation", "crossover_rate": 1.0, "mutation_rate": 0.1, "elitism_rate": 1.0, "file_loc": "t1"},
+    {"name": "T1 - 90% Crossover, No Mutation", "crossover_rate": 0.9, "mutation_rate": 0.0, "elitism_rate": 1.0, "file_loc": "t1"},
+    {"name": "T1 - 90% Crossover, 10% Mutation", "crossover_rate": 0.9, "mutation_rate": 0.1, "elitism_rate": 1.0, "file_loc": "t1"},
+    {"name": "T1 - Optimized Settings", "crossover_rate": 0.95, "mutation_rate": 0.05, "elitism_rate": 0.1, "file_loc": "t1"},
 
-    {"crossover_rate": 1.0, "mutation_rate": 0.0, "elitism_rate": 1.0, "elitism_type": "full_elite", "file_loc":"t2"},
-    {"crossover_rate": 1.0, "mutation_rate": 0.1, "elitism_rate": 1.0, "elitism_type": "full_elite", "file_loc":"t1"},
-    {"crossover_rate": 0.9, "mutation_rate": 0.0, "elitism_rate": 1.0, "elitism_type": "full_elite", "file_loc":"t1"},
-    {"crossover_rate": 0.9, "mutation_rate": 0.1, "elitism_rate": 1.0, "elitism_type": "full_elite", "file_loc":"t1"},
-    # Add your own best settings here
-    {"crossover_rate": 0.95, "mutation_rate": 0.05, "elitism_rate": 0.1, "elitism_type": "elite_percentage", "file_loc":"t1"}
+    {"name": "T2 - Full Crossover, No Mutation", "crossover_rate": 1.0, "mutation_rate": 0.0, "elitism_rate": 1.0, "file_loc": "t2"},
+    {"name": "T2 - Full Crossover, 10% Mutation", "crossover_rate": 1.0, "mutation_rate": 0.1, "elitism_rate": 1.0, "file_loc": "t2"},
+    {"name": "T2 - 90% Crossover, No Mutation", "crossover_rate": 0.9, "mutation_rate": 0.0, "elitism_rate": 1.0, "file_loc": "t2"},
+    {"name": "T2 - 90% Crossover, 10% Mutation", "crossover_rate": 0.9, "mutation_rate": 0.1, "elitism_rate": 1.0, "file_loc": "t2"},
+    {"name": "T2 - Optimized Settings", "crossover_rate": 0.95, "mutation_rate": 0.05, "elitism_rate": 0.1, "file_loc": "t2"}
 ]
 
 
+
 # Function to run the GA and log results to W&B
-def run_experiment(crossover_rate, mutation_rate, elitism_rate, elitism_type, fileLoc):
+def run_experiment(name,crossover_rate, mutation_rate, elitism_rate, fileLoc):
     # Initialize W&B run for tracking
     wandb.init(project="course-scheduling", config={
         "crossover_rate": crossover_rate,
         "mutation_rate": mutation_rate,
         "elitism_rate": elitism_rate,
-        "elitism_type": elitism_type,
-        "population_size": population,
-        "max_generations": maxGen
+        "population_size": population
+
     })
 
     # Run the GA
@@ -324,7 +324,7 @@ def run_experiment(crossover_rate, mutation_rate, elitism_rate, elitism_type, fi
 
 
     # Simulate the evolution process
-    geneticAlgorithm(crossover_rate, elitism_rate, mutation_rate, population, fileLoc, maxGen,True)
+    geneticAlgorithm(crossover_rate, elitism_rate, mutation_rate, population, fileLoc,True)
 
 
 
@@ -349,9 +349,9 @@ def run_experiment(crossover_rate, mutation_rate, elitism_rate, elitism_type, fi
 for i, params in enumerate(parameter_combinations):
     print(f"Running experiment {i + 1} with params: {params}")
     run_experiment(
+        name=params["name"],
         crossover_rate=params["crossover_rate"],
         mutation_rate=params["mutation_rate"],
         elitism_rate=params["elitism_rate"],
-        elitism_type=params["elitism_type"],
-        filesLoc=params["file_loc"]
+        fileLoc=params["file_loc"]
     )

@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "C:\Users\Avand\PycharmProjects\COSC3P71_A2_Ivan\Main.py", line 345, in <module>
-    run_experiment(
-  File "C:\Users\Avand\PycharmProjects\COSC3P71_A2_Ivan\Main.py", line 320, in run_experiment
-    geneticAlgorithm(crossover_rate, elitism_rate, mutation_rate, population, courseFile,
-TypeError: geneticAlgorithm() missing 1 required positional argument: 'isTest'
