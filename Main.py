@@ -1,6 +1,8 @@
 from Chromosone import Chromosone
 import random
 from Gene import Gene
+import wandb
+import json
 
 
 def generateChromosone(courses, timeslots, rooms):
@@ -38,12 +40,13 @@ def printChromosone(chromosone, courses, timeslots, rooms):
         # Extract course name and room name
         course_name = courses[gene.course]['name']
         room_name = rooms[gene.room]['name']
+        duration = courses[gene.course]['dur']
 
         # Format the time string
         time = f"{day}: {hour}pm"
 
         # Print details
-        print(f" {i + 1}: {course_name}, {time}, {room_name}")
+        print(f" {i + 1}: {course_name}, {duration}, {time}, {room_name}")
 
 def tournamentSelection(population):
     k = 2
@@ -137,131 +140,211 @@ def evolvePopulation(population, elitismRate, mutationRate, crossoverRate, gen):
 
     return newPopulation
 
+def geneticAlgorithm(crossoverRate, elitismRate, mutationRate, population,  courseFile,roomsFile, timeslotFile, maxGen, isTest):
+    # crossOvrRate=float(input("Enter your Crossover Rate: "))
+    # elitismRate=float(input("Enter your Elitism Rate: "))
 
-# crossOvrRate=float(input("Enter your Crossover Rate: "))
-# elitismRate=float(input("Enter your Elitism Rate: "))
+
+    crossoverRate = 0.95
+    elitismRate = 0.01
+    mutationRate = 0.2
+
+    population =250
+    print(str(population))
+    #int(input("Enter your Population Size: "))
+    courses = []
+
+
+    maxFitnesList=[]
+    avgFitnesList=[]
+
+
+
+
+
+    count=0
+    with open("t1/courses.txt", "r") as file:
+        next(file)
+
+        courses=[]
+        for line in file:
+            name, professor, students, duration = line.strip().split(",")
+
+
+            course_dict = {
+                "name": name,
+                "prof": professor,
+                "students": int(students),
+                "dur": int(duration)
+            }
+
+
+            courses.append(course_dict)
+            count+=1
+
+
+
+    rooms =[]
+
+    with open("t1/rooms.txt", "r") as file:
+        next(file)
+
+        for line in file:
+            name, capacity = line.strip().split(",")
+
+
+            rooms.append({
+                "name": name,
+                "capacity": int(capacity)
+            })
+
+    timeslots = []
+
+    with open("t1/timeslots.txt", "r") as file:
+        next(file)
+
+        for line in file:
+            day, hour = line.strip().split(",")
+            timeslots.append({
+                "day": day,
+                "hour": int(hour)
+            })
+
+
+
+    classesNum = len(courses)
+
+    Chromosone.courses = courses
+    Chromosone.rooms = rooms
+    Chromosone.timeslots = timeslots
+
+    chromPopulation = []
+
+    for i in range(population):
+        tempChrom = generateChromosone(courses, timeslots, rooms)
+        chromPopulation.append(tempChrom)
+
+    chromPopulation = sorted(chromPopulation, key=lambda chrom: chrom.getFitness(), reverse=True)
+
+    # for i in range(population):
+    # print(str(chromPopulation[i].getFitness()))
+    # print("\n")
+
+
+
+    print("Calulating...")
+    gen = 0
+    maxfitness = 0.0
+    crossoverPop = 0
+
+    results = []
+    fitnessData=[]
+
+    while (maxfitness != 1 ):
+
+
+
+
+
+        chromPopulation= evolvePopulation(chromPopulation, elitismRate, mutationRate, crossoverRate, gen)
+
+        tempMax=chromPopulation[0].getFitness()
+
+        avg=0
+        for i in range(len(chromPopulation)):
+            avg+=chromPopulation[i].getFitness()
+
+        avg/=len(chromPopulation)
+
+
+        if(maxfitness <tempMax):
+            maxfitness=chromPopulation[0].getFitness()
+
+
+
+        maxFitnesList.append(tempMax)
+        avgFitnesList.append(avg)
+
+        if isTest:
+            wandb.log({"generation": gen, "max_fitness": maxfitness, "avg_fitness": avg})
+            fitnessData.append({"generation": gen, "max_fitness": maxfitness, "avg_fitness": avg})
+
+        if (gen == maxGen):
+            break
+
+        gen += 1
+
+
+
+    printChromosone(chromPopulation[0], courses, timeslots, rooms)
+
+    return maxFitnesList, avgFitnesList
 
 
 crossoverRate = 0.95
 elitismRate = 0.01
 mutationRate = 0.2
-
 population =250
-print(str(population))
-#int(input("Enter your Population Size: "))
-courses = []
+
+
+geneticAlgorithm(crossoverRate, elitismRate, mutationRate, population,"t1/courses.txt","t1/rooms.txt", "t1/timeslots.txt",1200, False)
+
+# Define the parameter combinations
+parameter_combinations = [
+    {"crossover_rate": 1.0, "mutation_rate": 0.0, "elitism_rate": 1.0, "elitism_type": "full_elite"},
+    {"crossover_rate": 1.0, "mutation_rate": 0.1, "elitism_rate": 1.0, "elitism_type": "full_elite"},
+    {"crossover_rate": 0.9, "mutation_rate": 0.0, "elitism_rate": 1.0, "elitism_type": "full_elite"},
+    {"crossover_rate": 0.9, "mutation_rate": 0.1, "elitism_rate": 1.0, "elitism_type": "full_elite"},
+    # Add your own best settings here
+    {"crossover_rate": 0.95, "mutation_rate": 0.05, "elitism_rate": 0.1, "elitism_type": "elite_percentage"}
+]
+
+
+# Function to run the GA and log results to W&B
+def run_experiment(crossover_rate, mutation_rate, elitism_rate, elitism_type, population=250, maxGen=100,
+                   courseFile="t1/courses.txt", roomsFile="t1/rooms.txt", timeslotFile="t1/timeslots.txt"):
+    # Initialize W&B run for tracking
+    wandb.init(project="course-scheduling", config={
+        "crossover_rate": crossover_rate,
+        "mutation_rate": mutation_rate,
+        "elitism_rate": elitism_rate,
+        "elitism_type": elitism_type,
+        "population_size": population,
+        "max_generations": maxGen
+    })
+
+    # Run the GA
+    fitness_data = []
+
+    # Simulate the evolution process
+    geneticAlgorithm(crossover_rate, elitism_rate, mutation_rate, population, courseFile,
+                                          roomsFile, timeslotFile, maxGen,True)
 
 
 
 
+    # Save the fitness data as an artifact
+    with open("fitness_data.json", "w") as f:
+        json.dump(fitness_data, f)
+
+    # Create a W&B artifact to upload the data
+    artifact = wandb.Artifact(f'fitness_data_{crossover_rate}_{mutation_rate}_{elitism_type}', type='dataset')
+    artifact.add_file('fitness_data.json')
+    wandb.log_artifact(artifact)
+
+    # Save the final solution (if applicable)
+    wandb.save("final_solution.onnx")
+
+    # Close the W&B run
+    wandb.finish()
 
 
-
-
-count=0
-with open("t1/courses.txt", "r") as file:
-    next(file)
-
-    courses=[]
-    for line in file:
-        name, professor, students, duration = line.strip().split(",")
-
-
-        course_dict = {
-            "name": name,
-            "prof": professor,
-            "students": int(students),
-            "dur": int(duration)
-        }
-
-
-        courses.append(course_dict)
-        count+=1
-
-
-
-rooms =[]
-
-with open("t1/rooms.txt", "r") as file:
-    next(file)
-
-    for line in file:
-        name, capacity = line.strip().split(",")
-
-
-        rooms.append({
-            "name": name,
-            "capacity": int(capacity)
-        })
-
-timeslots = []
-
-with open("t1/timeslots.txt", "r") as file:
-    next(file)
-
-    for line in file:
-        day, hour = line.strip().split(",")
-        timeslots.append({
-            "day": day,
-            "hour": int(hour)
-        })
-
-
-
-classesNum = len(courses)
-
-Chromosone.courses = courses
-Chromosone.rooms = rooms
-Chromosone.timeslots = timeslots
-
-chromPopulation = []
-
-for i in range(population):
-    tempChrom = generateChromosone(courses, timeslots, rooms)
-    chromPopulation.append(tempChrom)
-
-chromPopulation = sorted(chromPopulation, key=lambda chrom: chrom.getFitness(), reverse=True)
-
-# for i in range(population):
-# print(str(chromPopulation[i].getFitness()))
-# print("\n")
-
-
-
-print("Calulating...")
-gen = 0
-maxfitness = 0.0
-crossoverPop = 0
-
-
-
-
-while (maxfitness != 1 ):
-
-
-
-
-
-    chromPopulation= evolvePopulation(chromPopulation, elitismRate, mutationRate, crossoverRate, gen)
-
-    tempMax=chromPopulation[0].getFitness()
-
-    avg=0
-    for i in range(len(chromPopulation)):
-        avg+=chromPopulation[i].getFitness()
-
-    avg/=len(chromPopulation)
-
-
-    if(maxfitness <tempMax):
-        maxfitness=chromPopulation[0].getFitness()
-
-    print("Gen" + str(gen) + ": " +str(maxfitness)+ "\t"+str(avg))
-
-    gen += 1
-
-
-printChromosone(chromPopulation[0], courses, timeslots, rooms)
-
-
-
+# Loop through the parameter combinations and run the experiments
+for i, params in enumerate(parameter_combinations):
+    print(f"Running experiment {i + 1} with params: {params}")
+    run_experiment(
+        crossover_rate=params["crossover_rate"],
+        mutation_rate=params["mutation_rate"],
+        elitism_rate=params["elitism_rate"],
+        elitism_type=params["elitism_type"]
+    )
