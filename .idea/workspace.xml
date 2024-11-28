@@ -8,45 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79a88295-d8b4-4d8c-b71e-d00f96ce5371" name="Changes" comment="Working on the report">
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132909-nwryorbx/files/config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132909-nwryorbx/files/output.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132909-nwryorbx/files/wandb-metadata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132909-nwryorbx/files/wandb-summary.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132909-nwryorbx/logs/debug-internal.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132909-nwryorbx/logs/debug.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132909-nwryorbx/run-nwryorbx.wandb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132914-uei5e7d5/files/config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132914-uei5e7d5/files/output.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132914-uei5e7d5/files/wandb-metadata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132914-uei5e7d5/files/wandb-summary.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132914-uei5e7d5/logs/debug-internal.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132914-uei5e7d5/logs/debug.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132914-uei5e7d5/run-uei5e7d5.wandb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132933-08vpu0em/files/config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132933-08vpu0em/files/output.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132933-08vpu0em/files/wandb-metadata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132933-08vpu0em/files/wandb-summary.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132933-08vpu0em/logs/debug-internal.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132933-08vpu0em/logs/debug.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132933-08vpu0em/run-08vpu0em.wandb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132953-0o7yh1ka/files/config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132953-0o7yh1ka/files/output.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132953-0o7yh1ka/files/wandb-metadata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132953-0o7yh1ka/files/wandb-summary.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132953-0o7yh1ka/logs/debug-internal.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132953-0o7yh1ka/logs/debug.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_132953-0o7yh1ka/run-0o7yh1ka.wandb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_133012-w9re44r7/files/config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_133012-w9re44r7/files/output.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_133012-w9re44r7/files/wandb-metadata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_133012-w9re44r7/files/wandb-summary.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_133012-w9re44r7/logs/debug-internal.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_133012-w9re44r7/logs/debug.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_133012-w9re44r7/run-w9re44r7.wandb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/COSC3P71_A2_Ivan.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/COSC3P71_A2_Ivan.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,12 +31,12 @@
     &quot;assignee&quot;: &quot;Avandj&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Avandj/COSC3P71_A2_Ivan.git&quot;,
-    &quot;accountId&quot;: &quot;3c8623c3-a1d6-4f62-a7ef-72cfc0fd118f&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Avandj/COSC3P71_A2_Ivan.git",
+    "accountId": "82d5a46a-c603-46a3-b27b-b2cf6867ccbe"
   }
-}</component>
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -269,7 +231,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731299625596</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Working on the report">
+      <option name="closed" value="true" />
+      <created>1732822405875</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1732822405876</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
