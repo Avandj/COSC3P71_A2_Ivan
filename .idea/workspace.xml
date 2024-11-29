@@ -8,8 +8,325 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79a88295-d8b4-4d8c-b71e-d00f96ce5371" name="Changes" comment="Working on the report">
+      <change afterPath="$PROJECT_DIR$/wandb/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/latest-run" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_182309-h8swt8s0/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_182309-h8swt8s0/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_182309-h8swt8s0/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_182309-h8swt8s0/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_182309-h8swt8s0/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_182309-h8swt8s0/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_182309-h8swt8s0/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_182309-h8swt8s0/run-h8swt8s0.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_182619-ahw8abqy/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_182619-ahw8abqy/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_182619-ahw8abqy/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_182619-ahw8abqy/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_182619-ahw8abqy/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_182619-ahw8abqy/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_182619-ahw8abqy/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_182619-ahw8abqy/run-ahw8abqy.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190706-lu8gmx2n/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190706-lu8gmx2n/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190706-lu8gmx2n/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190706-lu8gmx2n/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190706-lu8gmx2n/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190706-lu8gmx2n/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190706-lu8gmx2n/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190706-lu8gmx2n/run-lu8gmx2n.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190713-vm6uyez8/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190713-vm6uyez8/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190713-vm6uyez8/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190713-vm6uyez8/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190713-vm6uyez8/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190713-vm6uyez8/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190713-vm6uyez8/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190713-vm6uyez8/run-vm6uyez8.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190852-hv4bawxs/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190852-hv4bawxs/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190852-hv4bawxs/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190852-hv4bawxs/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190852-hv4bawxs/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190852-hv4bawxs/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190852-hv4bawxs/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190852-hv4bawxs/run-hv4bawxs.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190859-svn97ook/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190859-svn97ook/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190859-svn97ook/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190859-svn97ook/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190859-svn97ook/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190859-svn97ook/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190859-svn97ook/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_190859-svn97ook/run-svn97ook.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191345-gi8mq4mv/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191345-gi8mq4mv/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191345-gi8mq4mv/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191345-gi8mq4mv/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191345-gi8mq4mv/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191345-gi8mq4mv/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191345-gi8mq4mv/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191345-gi8mq4mv/run-gi8mq4mv.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191922-2d9cnbqo/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191922-2d9cnbqo/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191922-2d9cnbqo/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191922-2d9cnbqo/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191922-2d9cnbqo/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191922-2d9cnbqo/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191922-2d9cnbqo/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191922-2d9cnbqo/run-2d9cnbqo.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191925-ya68ic2a/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191925-ya68ic2a/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191925-ya68ic2a/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191925-ya68ic2a/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191925-ya68ic2a/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191925-ya68ic2a/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191925-ya68ic2a/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191925-ya68ic2a/run-ya68ic2a.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191928-5w5gl69u/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191928-5w5gl69u/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191928-5w5gl69u/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191928-5w5gl69u/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191928-5w5gl69u/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191928-5w5gl69u/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191928-5w5gl69u/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191928-5w5gl69u/run-5w5gl69u.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191932-i5e2mije/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191932-i5e2mije/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191932-i5e2mije/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191932-i5e2mije/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191932-i5e2mije/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191932-i5e2mije/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191932-i5e2mije/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191932-i5e2mije/run-i5e2mije.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191934-9xk6tl0m/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191934-9xk6tl0m/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191934-9xk6tl0m/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191934-9xk6tl0m/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191934-9xk6tl0m/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191934-9xk6tl0m/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191934-9xk6tl0m/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_191934-9xk6tl0m/run-9xk6tl0m.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_193815-yjkub8y2/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_193815-yjkub8y2/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_193815-yjkub8y2/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_193815-yjkub8y2/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_193815-yjkub8y2/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_193815-yjkub8y2/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_193815-yjkub8y2/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_193815-yjkub8y2/run-yjkub8y2.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_193947-slc6unnt/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_193947-slc6unnt/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_193947-slc6unnt/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_193947-slc6unnt/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_193947-slc6unnt/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_193947-slc6unnt/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_193947-slc6unnt/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_193947-slc6unnt/run-slc6unnt.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194023-n7ua9w8x/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194023-n7ua9w8x/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194023-n7ua9w8x/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194023-n7ua9w8x/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194023-n7ua9w8x/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194023-n7ua9w8x/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194023-n7ua9w8x/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194023-n7ua9w8x/run-n7ua9w8x.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194030-pnzmi4m7/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194030-pnzmi4m7/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194030-pnzmi4m7/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194030-pnzmi4m7/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194030-pnzmi4m7/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194030-pnzmi4m7/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194030-pnzmi4m7/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194030-pnzmi4m7/run-pnzmi4m7.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194037-7sb9b5ho/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194037-7sb9b5ho/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194037-7sb9b5ho/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194037-7sb9b5ho/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194037-7sb9b5ho/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194037-7sb9b5ho/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194037-7sb9b5ho/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194037-7sb9b5ho/run-7sb9b5ho.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194044-r9oajt1h/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194044-r9oajt1h/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194044-r9oajt1h/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194044-r9oajt1h/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194044-r9oajt1h/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194044-r9oajt1h/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194044-r9oajt1h/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194044-r9oajt1h/run-r9oajt1h.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194051-ik41oomy/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194051-ik41oomy/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194051-ik41oomy/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194051-ik41oomy/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194051-ik41oomy/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194051-ik41oomy/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194051-ik41oomy/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194051-ik41oomy/run-ik41oomy.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194056-7ohevhhc/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194056-7ohevhhc/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194056-7ohevhhc/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194056-7ohevhhc/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194056-7ohevhhc/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194056-7ohevhhc/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194056-7ohevhhc/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194056-7ohevhhc/run-7ohevhhc.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194106-rn29h3zv/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194106-rn29h3zv/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194106-rn29h3zv/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194106-rn29h3zv/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194106-rn29h3zv/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194106-rn29h3zv/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194106-rn29h3zv/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194106-rn29h3zv/run-rn29h3zv.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194206-giy03k5n/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194206-giy03k5n/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194206-giy03k5n/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194206-giy03k5n/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194206-giy03k5n/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194206-giy03k5n/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194206-giy03k5n/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194206-giy03k5n/run-giy03k5n.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194209-p037q1ni/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194209-p037q1ni/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194209-p037q1ni/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194209-p037q1ni/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194209-p037q1ni/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194209-p037q1ni/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194209-p037q1ni/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194209-p037q1ni/run-p037q1ni.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194438-2x6tygl7/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194438-2x6tygl7/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194438-2x6tygl7/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194438-2x6tygl7/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194438-2x6tygl7/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194438-2x6tygl7/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194438-2x6tygl7/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194438-2x6tygl7/run-2x6tygl7.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194603-nacmxe6v/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194603-nacmxe6v/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194603-nacmxe6v/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194603-nacmxe6v/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194603-nacmxe6v/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194603-nacmxe6v/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194603-nacmxe6v/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194603-nacmxe6v/run-nacmxe6v.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194609-7w7ddn6z/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194609-7w7ddn6z/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194609-7w7ddn6z/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194609-7w7ddn6z/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194609-7w7ddn6z/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194609-7w7ddn6z/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194609-7w7ddn6z/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194609-7w7ddn6z/run-7w7ddn6z.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194618-j9ee1j9i/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194618-j9ee1j9i/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194618-j9ee1j9i/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194618-j9ee1j9i/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194618-j9ee1j9i/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194618-j9ee1j9i/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194618-j9ee1j9i/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194618-j9ee1j9i/run-j9ee1j9i.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194624-3er3tfcv/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194624-3er3tfcv/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194624-3er3tfcv/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194624-3er3tfcv/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194624-3er3tfcv/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194624-3er3tfcv/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194624-3er3tfcv/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194624-3er3tfcv/run-3er3tfcv.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194631-alyekpjk/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194631-alyekpjk/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194631-alyekpjk/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194631-alyekpjk/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194631-alyekpjk/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194631-alyekpjk/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194631-alyekpjk/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194631-alyekpjk/run-alyekpjk.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194634-ty71ykdr/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194634-ty71ykdr/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194634-ty71ykdr/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194634-ty71ykdr/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194634-ty71ykdr/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194634-ty71ykdr/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194634-ty71ykdr/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194634-ty71ykdr/run-ty71ykdr.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194838-ctdloakg/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194838-ctdloakg/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194838-ctdloakg/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194838-ctdloakg/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194838-ctdloakg/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194838-ctdloakg/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194838-ctdloakg/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194838-ctdloakg/run-ctdloakg.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194936-2fdb09os/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194936-2fdb09os/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194936-2fdb09os/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194936-2fdb09os/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194936-2fdb09os/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194936-2fdb09os/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194936-2fdb09os/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_194936-2fdb09os/run-2fdb09os.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195023-6xx8e2gs/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195023-6xx8e2gs/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195023-6xx8e2gs/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195023-6xx8e2gs/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195023-6xx8e2gs/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195023-6xx8e2gs/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195023-6xx8e2gs/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195023-6xx8e2gs/run-6xx8e2gs.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195136-2cuns5la/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195136-2cuns5la/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195136-2cuns5la/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195136-2cuns5la/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195136-2cuns5la/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195136-2cuns5la/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195136-2cuns5la/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195136-2cuns5la/run-2cuns5la.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195143-nqkpiqvu/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195143-nqkpiqvu/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195143-nqkpiqvu/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195143-nqkpiqvu/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195143-nqkpiqvu/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195143-nqkpiqvu/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195143-nqkpiqvu/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195143-nqkpiqvu/run-nqkpiqvu.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195239-84hvbd3t/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195239-84hvbd3t/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195239-84hvbd3t/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195239-84hvbd3t/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195239-84hvbd3t/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195239-84hvbd3t/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195239-84hvbd3t/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195239-84hvbd3t/run-84hvbd3t.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195247-iuyb9rlw/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195247-iuyb9rlw/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195247-iuyb9rlw/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195247-iuyb9rlw/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195247-iuyb9rlw/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195247-iuyb9rlw/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195247-iuyb9rlw/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195247-iuyb9rlw/run-iuyb9rlw.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195318-w91fgii6/files/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195318-w91fgii6/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195318-w91fgii6/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195318-w91fgii6/files/wandb-summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195318-w91fgii6/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195318-w91fgii6/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195318-w91fgii6/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195318-w91fgii6/run-w91fgii6.wandb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195354-x8rnjt3z/files/output.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195354-x8rnjt3z/files/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195354-x8rnjt3z/files/wandb-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195354-x8rnjt3z/logs/debug-core.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195354-x8rnjt3z/logs/debug-internal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195354-x8rnjt3z/logs/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wandb/run-20241128_195354-x8rnjt3z/run-x8rnjt3z.wandb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/COSC3P71_A2_Ivan.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/COSC3P71_A2_Ivan.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/t1/courses.txt" beforeDir="false" afterPath="$PROJECT_DIR$/t1/courses.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,12 +349,12 @@
     &quot;assignee&quot;: &quot;Avandj&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Avandj/COSC3P71_A2_Ivan.git",
-    "accountId": "82d5a46a-c603-46a3-b27b-b2cf6867ccbe"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Avandj/COSC3P71_A2_Ivan.git&quot;,
+    &quot;accountId&quot;: &quot;82d5a46a-c603-46a3-b27b-b2cf6867ccbe&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -52,31 +369,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Python.Chromosone.executor": "Run",
-    "Python.ClassObj.executor": "Run",
-    "Python.Experiments.executor": "Run",
-    "Python.Gene.executor": "Run",
-    "Python.Main.executor": "Run",
-    "Python.Main.py.executor": "Run",
-    "Python._pydev_execfile.executor": "Run",
-    "Python.s.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/ivanalc/PycharmProjects/COSC3P71_A2_Ivan",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "aDefault",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python.Chromosone.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ClassObj.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Experiments.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Gene.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Main.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python._pydev_execfile.executor&quot;: &quot;Run&quot;,
+    &quot;Python.s.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/ivanalc/PycharmProjects/COSC3P71_A2_Ivan&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -99,6 +416,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -277,11 +595,11 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/COSC3P71_A2_Ivan$Chromosone.coverage" NAME="Chromosone Coverage Results" MODIFIED="1732636288662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/COSC3P71_A2_Ivan$ClassObj.coverage" NAME="ClassObj Coverage Results" MODIFIED="1730916774772" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/COSC3P71_A2_Ivan$Main.coverage" NAME="Main Coverage Results" MODIFIED="1732829366096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/COSC3P71_A2_Ivan$Experiments.coverage" NAME="Experiments Coverage Results" MODIFIED="1732765787565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/COSC3P71_A2_Ivan$Main.coverage" NAME="Main Coverage Results" MODIFIED="1732777018165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/COSC3P71_A2_Ivan$_pydev_execfile.coverage" NAME="_pydev_execfile Coverage Results" MODIFIED="1732473270637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_HOME_DIR$/plugins/python/helpers/pydev/_pydev_imps" />
     <SUITE FILE_PATH="coverage/COSC3P71_A2_Ivan$Gene.coverage" NAME="Gene Coverage Results" MODIFIED="1732482752555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/COSC3P71_A2_Ivan$Chromosone.coverage" NAME="Chromosone Coverage Results" MODIFIED="1732636288662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

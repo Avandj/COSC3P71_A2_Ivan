@@ -1,0 +1,10 @@
+250
+Calulating...
+Traceback (most recent call last):
+  File "/Users/ivanalc/PycharmProjects/COSC3P71_A2_Ivan/Main.py", line 357, in <module>
+    run_experiment(
+  File "/Users/ivanalc/PycharmProjects/COSC3P71_A2_Ivan/Main.py", line 331, in run_experiment
+    geneticAlgorithm(crossover_rate, elitism_rate, mutation_rate, population, fileLoc,True)
+  File "/Users/ivanalc/PycharmProjects/COSC3P71_A2_Ivan/Main.py", line 276, in geneticAlgorithm
+    print("Gen: "+gen+" Max: "+str(maxfitness)+" Avg: "+str(avg))
+TypeError: can only concatenate str (not "int") to str

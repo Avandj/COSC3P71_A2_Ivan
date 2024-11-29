@@ -1,7 +1,7 @@
 name,professor,students,duration
 Math 101,Dr. Smith,71,2
 Physics 401,Dr. Smith,37,3
-Chemistry 101,Dr. Smith,28,3`
+Chemistry 101,Dr. Smith,28,3
 Biology 301,Dr. Smith,87,3
 CS 101,Dr. Smith,41,3
 Math 301,Dr. Jones,80,2

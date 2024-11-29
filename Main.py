@@ -202,6 +202,8 @@ def geneticAlgorithm(crossoverRate, elitismRate, mutationRate, population, fileL
 
     timeslots = []
 
+
+
     with open(timeslotsFile, "r") as file:
         next(file)
 
@@ -271,6 +273,8 @@ def geneticAlgorithm(crossoverRate, elitismRate, mutationRate, population, fileL
             wandb.log({"generation": gen, "max_fitness": maxfitness, "avg_fitness": avg})
             fitnessData.append({"generation": gen, "max_fitness": maxfitness, "avg_fitness": avg})
 
+        print("Gen: "+str(gen)+" Max: "+str(maxfitness)+" Avg: "+str(avg))
+
         if (gen == maxGen):
             break
 
@@ -309,9 +313,9 @@ parameter_combinations = [
 
 
 # Function to run the GA and log results to W&B
-def run_experiment(runName,crossover_rate, mutation_rate, elitism_rate, fileLoc):
+def run_experiment(groupName,crossover_rate, mutation_rate, elitism_rate, fileLoc):
     # Initialize W&B run for tracking
-    wandb.init(project="course-scheduling",name=runName, config={
+    wandb.init(project="course-scheduling",name=groupName, config={
         "crossover_rate": crossover_rate,
         "mutation_rate": mutation_rate,
         "elitism_rate": elitism_rate,
@@ -347,11 +351,13 @@ def run_experiment(runName,crossover_rate, mutation_rate, elitism_rate, fileLoc)
 
 # Loop through the parameter combinations and run the experiments
 for i, params in enumerate(parameter_combinations):
-    print(f"Running experiment {i + 1} with params: {params}")
-    run_experiment(
-        name=params["name"],
-        crossover_rate=params["crossover_rate"],
-        mutation_rate=params["mutation_rate"],
-        elitism_rate=params["elitism_rate"],
-        fileLoc=params["file_loc"]
-    )
+    group_name = params["name"]  # Use the test criteria name as the group name
+    for run in range(5):  # Repeat 5 times
+        print(f"Running experiment {i + 1}, repetition {run + 1}, group: {group_name}")
+        run_experiment(
+            groupName=group_name,  # Pass group name for grouping
+            crossover_rate=params["crossover_rate"],
+            mutation_rate=params["mutation_rate"],
+            elitism_rate=params["elitism_rate"],
+            fileLoc=params["file_loc"]
+        )

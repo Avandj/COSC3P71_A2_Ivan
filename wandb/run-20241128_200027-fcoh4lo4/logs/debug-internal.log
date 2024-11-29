@@ -1,0 +1,17 @@
+{"time":"2024-11-28T20:00:27.753857-05:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2024-11-28T20:00:27.7539-05:00","level":"INFO","msg":"created symlink","path":"/Users/ivanalc/PycharmProjects/COSC3P71_A2_Ivan/wandb/run-20241128_200027-fcoh4lo4/logs/debug-core.log"}
+{"time":"2024-11-28T20:00:27.870249-05:00","level":"INFO","msg":"created new stream","id":"fcoh4lo4"}
+{"time":"2024-11-28T20:00:27.870362-05:00","level":"INFO","msg":"stream: started","id":"fcoh4lo4"}
+{"time":"2024-11-28T20:00:27.870368-05:00","level":"INFO","msg":"handler: started","stream_id":"fcoh4lo4"}
+{"time":"2024-11-28T20:00:27.870412-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"fcoh4lo4"}
+{"time":"2024-11-28T20:00:27.870391-05:00","level":"INFO","msg":"sender: started","stream_id":"fcoh4lo4"}
+{"time":"2024-11-28T20:00:28.072482-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-28T20:00:30.389345-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-28T20:00:30.38976-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-28T20:00:30.827167-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-28T20:00:30.963301-05:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2024-11-28T20:00:31.981961-05:00","level":"INFO","msg":"stream: closing","id":"fcoh4lo4"}
+{"time":"2024-11-28T20:00:31.982005-05:00","level":"INFO","msg":"handler: closed","stream_id":"fcoh4lo4"}
+{"time":"2024-11-28T20:00:31.982023-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":"fcoh4lo4"}
+{"time":"2024-11-28T20:00:31.982033-05:00","level":"INFO","msg":"sender: closed","stream_id":"fcoh4lo4"}
+{"time":"2024-11-28T20:00:31.982702-05:00","level":"INFO","msg":"stream: closed","id":"fcoh4lo4"}

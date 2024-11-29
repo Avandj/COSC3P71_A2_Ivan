@@ -1,0 +1,18 @@
+{"time":"2024-11-28T19:07:13.963396-05:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2024-11-28T19:07:13.963581-05:00","level":"INFO","msg":"created symlink","path":"/Users/ivanalc/PycharmProjects/COSC3P71_A2_Ivan/wandb/run-20241128_190713-vm6uyez8/logs/debug-core.log"}
+{"time":"2024-11-28T19:07:14.079702-05:00","level":"INFO","msg":"created new stream","id":"vm6uyez8"}
+{"time":"2024-11-28T19:07:14.079759-05:00","level":"INFO","msg":"stream: started","id":"vm6uyez8"}
+{"time":"2024-11-28T19:07:14.079769-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"vm6uyez8"}
+{"time":"2024-11-28T19:07:14.079787-05:00","level":"INFO","msg":"handler: started","stream_id":"vm6uyez8"}
+{"time":"2024-11-28T19:07:14.079804-05:00","level":"INFO","msg":"sender: started","stream_id":"vm6uyez8"}
+{"time":"2024-11-28T19:07:14.259342-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-28T19:08:49.880659-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-28T19:08:49.881673-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-28T19:08:50.889648-05:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact fitness_data_1.0_0.1","runtime_seconds":1.012495917}],"total_operations":1}}
+{"time":"2024-11-28T19:08:51.461026-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-28T19:08:52.659396-05:00","level":"INFO","msg":"stream: closing","id":"vm6uyez8"}
+{"time":"2024-11-28T19:08:52.659434-05:00","level":"INFO","msg":"handler: closed","stream_id":"vm6uyez8"}
+{"time":"2024-11-28T19:08:52.659462-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":"vm6uyez8"}
+{"time":"2024-11-28T19:08:52.659522-05:00","level":"ERROR","msg":"runfiles: CreateRunFiles returned error: api: failed sending: POST https://api.wandb.ai/graphql giving up after 1 attempt(s): context canceled"}
+{"time":"2024-11-28T19:08:52.659512-05:00","level":"INFO","msg":"sender: closed","stream_id":"vm6uyez8"}
+{"time":"2024-11-28T19:08:52.659651-05:00","level":"INFO","msg":"stream: closed","id":"vm6uyez8"}
