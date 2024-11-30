@@ -1,0 +1,17 @@
+{"time":"2024-11-28T22:47:28.947236-05:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2024-11-28T22:47:28.94727-05:00","level":"INFO","msg":"created symlink","path":"/Users/ivanalc/PycharmProjects/COSC3P71_A2_Ivan/wandb/run-20241128_224728-altk20ml/logs/debug-core.log"}
+{"time":"2024-11-28T22:47:29.069149-05:00","level":"INFO","msg":"created new stream","id":"altk20ml"}
+{"time":"2024-11-28T22:47:29.069244-05:00","level":"INFO","msg":"stream: started","id":"altk20ml"}
+{"time":"2024-11-28T22:47:29.069239-05:00","level":"INFO","msg":"handler: started","stream_id":"altk20ml"}
+{"time":"2024-11-28T22:47:29.069247-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"altk20ml"}
+{"time":"2024-11-28T22:47:29.069286-05:00","level":"INFO","msg":"sender: started","stream_id":"altk20ml"}
+{"time":"2024-11-28T22:47:29.246709-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-28T22:47:29.793769-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-28T22:47:29.794023-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-28T22:47:30.175661-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-28T22:47:30.285003-05:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2024-11-28T22:47:31.299235-05:00","level":"INFO","msg":"stream: closing","id":"altk20ml"}
+{"time":"2024-11-28T22:47:31.299256-05:00","level":"INFO","msg":"handler: closed","stream_id":"altk20ml"}
+{"time":"2024-11-28T22:47:31.299269-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":"altk20ml"}
+{"time":"2024-11-28T22:47:31.299282-05:00","level":"INFO","msg":"sender: closed","stream_id":"altk20ml"}
+{"time":"2024-11-28T22:47:31.29941-05:00","level":"INFO","msg":"stream: closed","id":"altk20ml"}

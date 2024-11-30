@@ -1,0 +1,17 @@
+{
+  "os":  "macOS-15.1.1-arm64-arm-64bit",
+  "python":  "3.9.6",
+  "startedAt":  "2024-11-29T03:49:34.034893Z",
+  "program":  "/Users/ivanalc/PycharmProjects/COSC3P71_A2_Ivan/Main.py",
+  "codePath":  "Main.py",
+  "git":  {
+    "remote":  "https://github.com/Avandj/COSC3P71_A2_Ivan.git",
+    "commit":  "2326ae0401513c6bfac675b63138383a90830ddb"
+  },
+  "email":  "ivanalc.oviedo@gmail.com",
+  "root":  "/Users/ivanalc/PycharmProjects/COSC3P71_A2_Ivan",
+  "host":  "Ivans-MacBook-Pro.local",
+  "username":  "ivanalc",
+  "executable":  "/Users/ivanalc/PycharmProjects/COSC3P71_A2_Ivan/.venv/bin/python",
+  "codePathLocal":  "Main.py"
+}

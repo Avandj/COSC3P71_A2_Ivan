@@ -1,0 +1,49 @@
+250
+Calulating...
+Gen: 0 Max: 0.07692307692307693 Avg: 0.02269284141515647
+Gen: 1 Max: 0.07692307692307693 Avg: 0.022102501600724543
+Gen: 2 Max: 0.07692307692307693 Avg: 0.022916165252423976
+Gen: 3 Max: 0.07692307692307693 Avg: 0.02370976789596451
+Gen: 4 Max: 0.07692307692307693 Avg: 0.023945317474767386
+Gen: 5 Max: 0.14285714285714285 Avg: 0.024740181935694845
+Gen: 6 Max: 0.14285714285714285 Avg: 0.0244914042942152
+Gen: 7 Max: 0.14285714285714285 Avg: 0.02484142516503317
+Gen: 8 Max: 0.14285714285714285 Avg: 0.02546112393292273
+Gen: 9 Max: 0.14285714285714285 Avg: 0.02424180387298474
+Gen: 10 Max: 0.14285714285714285 Avg: 0.023218717772922153
+Gen: 11 Max: 0.14285714285714285 Avg: 0.02300584208020669
+Gen: 12 Max: 0.14285714285714285 Avg: 0.024665246362232066
+Gen: 13 Max: 0.14285714285714285 Avg: 0.025011784860966738
+Gen: 14 Max: 0.14285714285714285 Avg: 0.02530970127399215
+Gen: 15 Max: 0.14285714285714285 Avg: 0.0246340800887317
+Gen: 16 Max: 0.14285714285714285 Avg: 0.02455727938116383
+Gen: 17 Max: 0.3333333333333333 Avg: 0.02697038044615355
+Gen: 18 Max: 0.3333333333333333 Avg: 0.027831079926926537
+Gen: 19 Max: 0.3333333333333333 Avg: 0.028609733933077818
+Gen: 20 Max: 0.3333333333333333 Avg: 0.02816857611071637
+Gen: 21 Max: 1 Avg: 0.03215063865827867
+ 1: Math 101, 2, Monday: 9pm, Large Lecture 2
+ 2: Physics 401, 3, Tuesday: 10pm, Large Lecture 1
+ 3: Chemistry 101, 3, Tuesday: 11pm, Lab B
+ 4: Biology 301, 3, Wednesday: 13pm, Large Lecture 1
+ 5: CS 101, 3, Wednesday: 15pm, Large Lecture 2
+ 6: Math 301, 2, Wednesday: 15pm, Large Lecture 1
+ 7: Physics 101, 2, Monday: 15pm, Large Lecture 2
+ 8: Chemistry 201, 2, Monday: 10pm, Large Lecture 2
+ 9: Biology 401, 2, Tuesday: 15pm, Large Lecture 2
+ 10: CS 101, 2, Wednesday: 16pm, Large Lecture 1
+ 11: Math 101, 3, Wednesday: 9pm, Large Lecture 2
+ 12: Physics 101, 1, Monday: 14pm, Large Lecture 1
+ 13: Chemistry 101, 3, Wednesday: 14pm, Large Lecture 1
+ 14: Biology 201, 1, Monday: 11pm, Large Lecture 1
+ 15: CS 301, 3, Tuesday: 10pm, Large Lecture 2
+ 16: Math 101, 3, Tuesday: 11pm, Large Lecture 1
+ 17: Physics 101, 3, Monday: 16pm, Large Lecture 1
+ 18: Chemistry 101, 3, Tuesday: 9pm, Large Lecture 2
+ 19: Biology 201, 1, Wednesday: 9pm, Large Lecture 1
+ 20: CS 401, 3, Tuesday: 16pm, Large Lecture 1
+ 21: Math 201, 2, Tuesday: 13pm, Large Lecture 1
+ 22: Physics 401, 1, Monday: 14pm, Large Lecture 2
+ 23: Chemistry 401, 1, Monday: 15pm, Large Lecture 1
+ 24: Biology 401, 1, Monday: 9pm, Large Lecture 1
+ 25: CS 101, 2, Tuesday: 9pm, Large Lecture 1

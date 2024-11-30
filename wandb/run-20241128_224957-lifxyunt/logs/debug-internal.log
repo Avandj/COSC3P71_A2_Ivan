@@ -1,0 +1,17 @@
+{"time":"2024-11-28T22:49:57.861575-05:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2024-11-28T22:49:57.861605-05:00","level":"INFO","msg":"created symlink","path":"/Users/ivanalc/PycharmProjects/COSC3P71_A2_Ivan/wandb/run-20241128_224957-lifxyunt/logs/debug-core.log"}
+{"time":"2024-11-28T22:49:57.9772-05:00","level":"INFO","msg":"created new stream","id":"lifxyunt"}
+{"time":"2024-11-28T22:49:57.977246-05:00","level":"INFO","msg":"stream: started","id":"lifxyunt"}
+{"time":"2024-11-28T22:49:57.977242-05:00","level":"INFO","msg":"handler: started","stream_id":"lifxyunt"}
+{"time":"2024-11-28T22:49:57.977266-05:00","level":"INFO","msg":"sender: started","stream_id":"lifxyunt"}
+{"time":"2024-11-28T22:49:57.977251-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"lifxyunt"}
+{"time":"2024-11-28T22:49:58.22036-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-28T22:50:03.09316-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-28T22:50:03.093669-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-28T22:50:03.521177-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-28T22:50:03.647096-05:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2024-11-28T22:50:04.661518-05:00","level":"INFO","msg":"stream: closing","id":"lifxyunt"}
+{"time":"2024-11-28T22:50:04.661549-05:00","level":"INFO","msg":"handler: closed","stream_id":"lifxyunt"}
+{"time":"2024-11-28T22:50:04.66157-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":"lifxyunt"}
+{"time":"2024-11-28T22:50:04.661589-05:00","level":"INFO","msg":"sender: closed","stream_id":"lifxyunt"}
+{"time":"2024-11-28T22:50:04.661754-05:00","level":"INFO","msg":"stream: closed","id":"lifxyunt"}

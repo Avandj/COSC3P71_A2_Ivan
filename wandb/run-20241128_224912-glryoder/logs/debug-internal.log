@@ -1,0 +1,17 @@
+{"time":"2024-11-28T22:49:12.579666-05:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2024-11-28T22:49:12.579698-05:00","level":"INFO","msg":"created symlink","path":"/Users/ivanalc/PycharmProjects/COSC3P71_A2_Ivan/wandb/run-20241128_224912-glryoder/logs/debug-core.log"}
+{"time":"2024-11-28T22:49:12.696684-05:00","level":"INFO","msg":"created new stream","id":"glryoder"}
+{"time":"2024-11-28T22:49:12.696746-05:00","level":"INFO","msg":"stream: started","id":"glryoder"}
+{"time":"2024-11-28T22:49:12.696742-05:00","level":"INFO","msg":"handler: started","stream_id":"glryoder"}
+{"time":"2024-11-28T22:49:12.69675-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"glryoder"}
+{"time":"2024-11-28T22:49:12.696776-05:00","level":"INFO","msg":"sender: started","stream_id":"glryoder"}
+{"time":"2024-11-28T22:49:12.885874-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-28T22:49:15.219574-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-28T22:49:15.220118-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-28T22:49:15.611161-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-28T22:49:15.748487-05:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2024-11-28T22:49:16.765681-05:00","level":"INFO","msg":"stream: closing","id":"glryoder"}
+{"time":"2024-11-28T22:49:16.765721-05:00","level":"INFO","msg":"handler: closed","stream_id":"glryoder"}
+{"time":"2024-11-28T22:49:16.765744-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":"glryoder"}
+{"time":"2024-11-28T22:49:16.765754-05:00","level":"INFO","msg":"sender: closed","stream_id":"glryoder"}
+{"time":"2024-11-28T22:49:16.766033-05:00","level":"INFO","msg":"stream: closed","id":"glryoder"}

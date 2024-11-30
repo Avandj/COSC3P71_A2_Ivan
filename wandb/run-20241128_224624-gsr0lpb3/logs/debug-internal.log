@@ -1,0 +1,18 @@
+{"time":"2024-11-28T22:46:24.228871-05:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2024-11-28T22:46:24.228896-05:00","level":"INFO","msg":"created symlink","path":"/Users/ivanalc/PycharmProjects/COSC3P71_A2_Ivan/wandb/run-20241128_224624-gsr0lpb3/logs/debug-core.log"}
+{"time":"2024-11-28T22:46:24.345356-05:00","level":"INFO","msg":"created new stream","id":"gsr0lpb3"}
+{"time":"2024-11-28T22:46:24.345409-05:00","level":"INFO","msg":"stream: started","id":"gsr0lpb3"}
+{"time":"2024-11-28T22:46:24.345405-05:00","level":"INFO","msg":"handler: started","stream_id":"gsr0lpb3"}
+{"time":"2024-11-28T22:46:24.345414-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"gsr0lpb3"}
+{"time":"2024-11-28T22:46:24.345431-05:00","level":"INFO","msg":"sender: started","stream_id":"gsr0lpb3"}
+{"time":"2024-11-28T22:46:24.596633-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-28T22:46:39.805854-05:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/ivanalc-oviedo-brock-university/course-scheduling/gsr0lpb3/file_stream\": read tcp 10.100.58.166:55774->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2024-11-28T22:46:55.206232-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-28T22:46:55.206685-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-28T22:46:56.210511-05:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact fitness_data_0.95_0.05","runtime_seconds":1.006671125}],"total_operations":1}}
+{"time":"2024-11-28T22:46:57.412683-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-28T22:46:58.528187-05:00","level":"INFO","msg":"stream: closing","id":"gsr0lpb3"}
+{"time":"2024-11-28T22:46:58.528225-05:00","level":"INFO","msg":"handler: closed","stream_id":"gsr0lpb3"}
+{"time":"2024-11-28T22:46:58.528241-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":"gsr0lpb3"}
+{"time":"2024-11-28T22:46:58.528264-05:00","level":"INFO","msg":"sender: closed","stream_id":"gsr0lpb3"}
+{"time":"2024-11-28T22:46:58.528438-05:00","level":"INFO","msg":"stream: closed","id":"gsr0lpb3"}

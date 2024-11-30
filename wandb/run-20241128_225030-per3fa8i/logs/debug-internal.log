@@ -1,0 +1,18 @@
+{"time":"2024-11-28T22:50:30.375801-05:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2024-11-28T22:50:30.375833-05:00","level":"INFO","msg":"created symlink","path":"/Users/ivanalc/PycharmProjects/COSC3P71_A2_Ivan/wandb/run-20241128_225030-per3fa8i/logs/debug-core.log"}
+{"time":"2024-11-28T22:50:30.489482-05:00","level":"INFO","msg":"created new stream","id":"per3fa8i"}
+{"time":"2024-11-28T22:50:30.489522-05:00","level":"INFO","msg":"stream: started","id":"per3fa8i"}
+{"time":"2024-11-28T22:50:30.489533-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"per3fa8i"}
+{"time":"2024-11-28T22:50:30.489533-05:00","level":"INFO","msg":"sender: started","stream_id":"per3fa8i"}
+{"time":"2024-11-28T22:50:30.48956-05:00","level":"INFO","msg":"handler: started","stream_id":"per3fa8i"}
+{"time":"2024-11-28T22:50:30.591446-05:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 10.100.58.166:56009->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2024-11-28T22:50:32.907745-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-28T22:50:33.475945-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-28T22:50:33.476404-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-28T22:50:33.99977-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-28T22:50:34.102166-05:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2024-11-28T22:50:35.11774-05:00","level":"INFO","msg":"stream: closing","id":"per3fa8i"}
+{"time":"2024-11-28T22:50:35.117776-05:00","level":"INFO","msg":"handler: closed","stream_id":"per3fa8i"}
+{"time":"2024-11-28T22:50:35.117796-05:00","level":"INFO","msg":"sender: closed","stream_id":"per3fa8i"}
+{"time":"2024-11-28T22:50:35.117792-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":"per3fa8i"}
+{"time":"2024-11-28T22:50:35.118068-05:00","level":"INFO","msg":"stream: closed","id":"per3fa8i"}

@@ -4,7 +4,7 @@ import random
 
 class Chromosone:
 
-    # Static class variables
+
     courses = None
     rooms = None
     timeslots = None
